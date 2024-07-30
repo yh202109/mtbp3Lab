@@ -353,11 +353,11 @@ To use ``sklearn.metrics`` (stable):
    y2 = ['v1'] * 70 + ['v2'] * 30
    print("Cohen's kappa:", cohen_kappa_score(y1, y2))
 
-To use ``mtbp3.statlab`` (testing):
+To use ``mtbp3Lab`` (testing):
 
 .. code:: python
 
-   from mtbp3.statlab import kappa
+   from mtbp3Lab.statlab import kappa
    y1 = ['v2'] * 70 + ['v1'] * 30
    y2 = ['v1'] * 70 + ['v2'] * 30
    kappa = kappa.KappaCalculator([y1,y2])
@@ -367,11 +367,11 @@ To use ``mtbp3.statlab`` (testing):
 Bootstrap CI
 =============
 
-To use ``mtbp3.statlab``:
+To use ``mtbp3Lab.statlab``:
 
 .. testsetup:: *
 
-   from mtbp3.statlab import kappa
+   from mtbp3Lab.statlab import kappa
    y1 = ['v2'] * 70 + ['v1'] * 30
    y2 = ['v1'] * 70 + ['v2'] * 30
    kappa = kappa.KappaCalculator(y1,y2)
@@ -394,11 +394,11 @@ Note that examples of using ``SAS/PROC FREQ`` and ``R`` package ``vcd`` for calc
 Bubble Plot
 =============
 
-To create a bubble plot using ``mtbp3.statlab``:
+To create a bubble plot using ``mtbp3Lab.statlab``:
 
 .. code:: python
 
-    from mtbp3.statlab import kappa
+    from mtbp3Lab.statlab import kappa
 
     fruits = ['Apple', 'Orange', 'Pear']
     np.random.seed(100)
@@ -406,7 +406,7 @@ To create a bubble plot using ``mtbp3.statlab``:
     r2 = np.random.choice(fruits, size=100).tolist()
 
     kappa = KappaCalculator([r1,r2], stringna='NA')
-    print("Cohen's kappa (mtbp3.statlab): "+str(kappa.cohen_kappa))
+    print("Cohen's kappa (mtbp3Lab.statlab): "+str(kappa.cohen_kappa))
     print("Number of raters per sample: "+str(kappa.n_rater))
     print("Number of rating categories: "+str(kappa.n_category))
     print("Number of sample: "+str(kappa.y_count.shape[0]))
@@ -417,7 +417,7 @@ Output:
 
 .. testoutput::
 
-    Cohen's kappa (mtbp3.statlab): 0.06513872135102527
+    Cohen's kappa (mtbp3Lab.statlab): 0.06513872135102527
     Number of raters per sample: 2.0
     Number of rating categories: 3
     Number of sample: 100
@@ -427,7 +427,7 @@ Output:
     :alt: bubble plot
 
 Sometimes monitoring individual raters rates might be needed for the interpretation of :math:`\kappa`.
-To create a bubble plot with individual raters summary using ``mtbp3.statlab``:
+To create a bubble plot with individual raters summary using ``mtbp3Lab.statlab``:
 
 .. code:: python
 

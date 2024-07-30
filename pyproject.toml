@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mtbp3Lab"
-version = "0.1.1"
+version = "0.1.2"
 description = "my lab notes"
 authors = ["Y. Hsu"]
 license = "GNU General Public License v3.0"
