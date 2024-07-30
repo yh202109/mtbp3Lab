@@ -1,0 +1,131 @@
+mtbp3Lab.util.cdtg
+==================
+
+.. py:module:: mtbp3Lab.util.cdtg
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mtbp3Lab.util.cdtg.catPlotter
+
+
+Module Contents
+---------------
+
+.. py:class:: catPlotter(df, y_col, group_col=None, grid_col=None, grid_wrap=None, x_col=None, pt_size=5, y_scale_base=0, x_scale_base=0, title='', fig_size_0=7, fig_size_1=6, point_position='swarm', x_label_rotate=None, grid_kws=None)
+
+   A class for creating categorical box plots and strip plots.
+
+   Parameters:
+   - df (pandas.DataFrame): The input DataFrame.
+   - group_col (str): The column name for grouping the data.
+   - y_col (str): The column name for the y-axis variable.
+   - x_col (str): The column name for the x-axis variable.
+   - grid_col (str, optional): The column name for creating subplots based on a grid. Default is None.
+   - grid_wrap (int, optional): The number of columns in the grid. Default is None.
+   - pt_size (int, optional): The size of the points in the strip plot. Default is 5.
+   - x_scale_base (int, optional): The base for the x-axis scale. Default is 10.
+   - title (str, optional): The title of the plot. Default is an empty string.
+   - fig_size_0 (int, optional): The width of the figure. Default is 7.
+   - fig_size_1 (int, optional): The height of the figure. Default is 6.
+   - grid_kws (dict, optional): Additional keyword arguments for the FacetGrid. Default is None.
+
+   Methods:
+   - update_parameters(**kwargs): Update the parameters of the catPlotter instance.
+   - boxplot(): Create a categorical box plot and strip plot.
+   - lineplot(): Create a line plot by categorical group_col on the x-axis with grid option.
+   - generate_example_dataset(): Generate an example dataset.
+
+   Raises:
+   - ValueError: If an invalid parameter is provided or if group_col, x_col, or y_col is not found in DataFrame columns.
+
+
+   .. py:attribute:: df
+
+
+   .. py:attribute:: grid_col
+
+
+   .. py:attribute:: point_position
+
+
+   .. py:attribute:: grid_wrap
+
+
+   .. py:attribute:: group_col
+
+
+   .. py:attribute:: y_col
+
+
+   .. py:attribute:: x_col
+
+
+   .. py:attribute:: pt_size
+
+
+   .. py:attribute:: x_scale_base
+
+
+   .. py:attribute:: y_scale_base
+
+
+   .. py:attribute:: title
+
+
+   .. py:attribute:: fig_size_0
+
+
+   .. py:attribute:: fig_size_1
+
+
+   .. py:attribute:: x_label_rotate
+
+
+   .. py:attribute:: grid_kws
+
+
+   .. py:method:: update_parameters(**kwargs)
+
+      Update the parameters.
+
+      Parameters:
+      - kwargs (dict): The keyword arguments to update the parameters.
+
+      Raises:
+      - ValueError: If an invalid parameter is provided.
+
+
+
+   .. py:method:: boxplot()
+
+      Create a categorical box plot and strip plot.
+
+      Raises:
+      - ValueError: If group_col or y_col is not found in DataFrame columns.
+
+
+
+   .. py:method:: generate_example_dataset()
+      :staticmethod:
+
+
+      Generate an example dataset.
+
+      :returns: The example dataset.
+      :rtype: pandas.DataFrame
+
+
+
+   .. py:method:: lineplot()
+
+      Create a line plot by categorical group_col on the x-axis with grid option.
+
+      Raises:
+      - ValueError: If group_col or y_col is not found in DataFrame columns.
+
+
+

@@ -1,0 +1,137 @@
+mtbp3Lab.util.cdt
+=================
+
+.. py:module:: mtbp3Lab.util.cdt
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mtbp3Lab.util.cdt.ListTree
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   mtbp3Lab.util.cdt.diff_2cols_in_1df
+   mtbp3Lab.util.cdt.diff_2cols_in_2df
+   mtbp3Lab.util.cdt.summarize_1nc_by_2group
+
+
+Module Contents
+---------------
+
+.. py:function:: diff_2cols_in_1df(df, col1='ARM', col2='ACTARM', keep_diff_only=False)
+
+   Calculate the difference between two columns in a DataFrame.
+
+   :param df: The DataFrame containing the columns to compare.
+   :type df: pandas.DataFrame
+   :param col1: The name of the first column to compare. Default is 'ARM'.
+   :type col1: str
+   :param col2: The name of the second column to compare. Default is 'ACTARM'.
+   :type col2: str
+
+   :returns: If there is a difference between the two columns,
+             a DataFrame is returned with the unique combinations of values in col1 and col2,
+             along with a 'diff' column indicating whether the values are different ('True') or not ('').
+             If there is no difference between the two columns, the string "The two columns are the same." is returned.
+   :rtype: pandas.DataFrame or str
+
+
+.. py:function:: diff_2cols_in_2df(df1, df2, col, gp)
+
+   Check if a column exists in both dataframes.
+
+   :param df1: The first dataframe.
+   :type df1: pandas.DataFrame
+   :param df2: The second dataframe.
+   :type df2: pandas.DataFrame
+   :param col: The column to check.
+   :type col: str
+   :param gp: The group column.
+   :type gp: str
+
+   :returns: True if the column exists in both dataframes, False otherwise.
+   :rtype: bool
+
+
+.. py:function:: summarize_1nc_by_2group(df=None, column='', cutoff=None, group_col0='', group_col1='', to_cat=True)
+
+   Create a summary dataframe that shows the percentage of NaN values and values less than a cutoff point in a numerical column.
+
+   :param df: The input dataframe.
+   :type df: pandas.DataFrame
+   :param column: The name of the numerical column.
+   :type column: str
+   :param cutoff: The cutoff point.
+   :type cutoff: float
+   :param group_col0: The first group column.
+   :type group_col0: str
+   :param group_col1: The second group column.
+   :type group_col1: str
+   :param to_cat: Whether to categorize the column based on the cutoff point.
+   :type to_cat: bool
+
+   :returns: A summary dataframe with two columns: 'NaN Percentage' and 'Below Cutoff Percentage', pivoted by group_col1.
+   :rtype: pandas.DataFrame
+
+   :raises ValueError: If the input is not a DataFrame or if the column is not a string or does not exist in the DataFrame.
+   :raises ValueError: If the group_col0 or group_col1 is not a string or does not exist in the DataFrame.
+   :raises ValueError: If the column is not a numerical column.
+
+
+.. py:class:: ListTree(lst=[], label=[], infmt='path')
+
+   .. py:attribute:: lst
+
+
+   .. py:attribute:: label
+
+
+   .. py:attribute:: infmt
+
+
+   .. py:attribute:: df
+
+
+   .. py:attribute:: prelst
+
+
+   .. py:attribute:: tree
+
+
+   .. py:method:: __list_tree_df()
+
+
+   .. py:method:: __list_tree_pre(to_right=False)
+
+
+   .. py:method:: list_tree(to_right=False)
+
+      Returns a DataFrame representing the tree structure of the object.
+
+      Parameters:
+      - to_right (bool): If True, aligns the tree structure to the right by padding with spaces.
+
+      Returns:
+      - tree (DataFrame): DataFrame representing the tree structure.
+
+
+
+   .. py:method:: list_tree_with_keyword(keywords, neighbor=0, outfmt='simple')
+
+      Search for keywords in the list of items.
+
+      :param keywords: List of keywords to search for.
+      :type keywords: list
+
+      :returns: List of items that contain the keywords.
+      :rtype: list
+
+
+
