@@ -62,12 +62,12 @@ Documentation:
 
 ## How to Cite 
 
-Hsu, Y. (2024). mtbp3: My lab notes in Python [Software]. Retrieved from https://yh202109.github.io/mtbp3Lab/index.html.
+Hsu, Y. (2024). mtbp3Lab: My lab notes in Python [Software]. Retrieved from https://yh202109.github.io/mtbp3Lab/index.html.
 
 ```
 @software{mtbp3,
   author = {Hsu, Y.},
-  title = {mtbp3: My lab notes in Python},
+  title = {mtbp3Lab: My lab notes in Python},
   year = {2024},
   url = {https://yh202109.github.io/mtbp3Lab/index.html},
   note = {Software}
