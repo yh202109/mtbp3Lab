@@ -1,6 +1,6 @@
 import unittest
 import warnings
-from mtbp3.util.cdtg import catPlotter
+from mtbp3Lab.util.cdtg import catPlotter
 import pandas as pd
 
 class TestCatPlotter(unittest.TestCase):

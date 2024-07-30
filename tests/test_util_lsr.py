@@ -1,7 +1,7 @@
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 import unittest
-from mtbp3 import util
+from mtbp3Lab import util
 import os
 
 

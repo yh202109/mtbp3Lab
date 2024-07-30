@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import numpy as np
-from mtbp3.statlab.corr import CorrCalculator
+from mtbp3Lab.statlab.corr import CorrCalculator
 import matplotlib.pyplot as plt
 
 class TestCorrCalculator(unittest.TestCase):

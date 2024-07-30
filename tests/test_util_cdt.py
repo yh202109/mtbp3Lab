@@ -3,7 +3,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 import unittest
 import pandas as pd
-from mtbp3.util import cdt
+from mtbp3Lab.util import cdt
 
 class TestCdt(unittest.TestCase):
     def setUp(self):

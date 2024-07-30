@@ -1,5 +1,5 @@
 import unittest
-from mtbp3.statlab.kappa import KappaCalculator
+from mtbp3Lab.statlab.kappa import KappaCalculator
 import statsmodels.stats.inter_rater as ir
 
 class TestKappaCalculator(unittest.TestCase):
