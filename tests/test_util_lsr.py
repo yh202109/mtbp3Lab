@@ -1,6 +1,7 @@
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 import unittest
+import mtbp3
 from mtbp3 import util
 import os
 
@@ -8,7 +9,7 @@ import os
 class TestLsrTree(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super(TestLsrTree, self).__init__(*args, **kwargs)
-        self.test_folder = util.get_data('test_lsr')
+        self.test_folder = mtbp3.get_data('test_lsr')
 
     def test_list_files_list(self):
         lsrt = util.lsr.LsrTree(self.test_folder, outfmt="list")
