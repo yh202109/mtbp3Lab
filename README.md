@@ -1,4 +1,4 @@
-# mtbp3
+# mtbp3Lab
 
 ![PyPI](https://img.shields.io/pypi/v/mtbp3Lab?label=pypi%20package)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/mtbp3Lab)
