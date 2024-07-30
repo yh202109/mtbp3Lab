@@ -205,12 +205,12 @@ Example - Group-1
 How-to 
 *************
 
-To use both ``statsmodels.stats.inter_rater`` and ``mtbp3.statlab``:
+To use both ``statsmodels.stats.inter_rater`` and ``mtbp3Lab.statlab``:
 
 .. testcode::
 
    import statsmodels.stats.inter_rater as ir
-   from mtbp3.statlab import kappa
+   from mtbp3Lab.statlab import kappa
 
    r1 = ['NA'] * 20 + ['B'] * 50 + ['A'] * 30
    r2 = ['A'] * 20 + ['NA'] * 20 + ['B'] * 60
@@ -221,7 +221,7 @@ To use both ``statsmodels.stats.inter_rater`` and ``mtbp3.statlab``:
    kappa = KappaCalculator(data, stringna='NA')
 
    print("Fleiss's kappa (stasmodels.stats.inter_rater): "+str(ir.fleiss_kappa(kappa.y_count)))
-   print("Fleiss's kappa (mtbp3.statlab): "+str(kappa.fleiss_kappa))
+   print("Fleiss's kappa (mtbp3Lab.statlab): "+str(kappa.fleiss_kappa))
    print("Number of raters per sample: "+str(kappa.n_rater))
    print("Number of rating categories: "+str(kappa.n_category))
    print("Number of sample: "+str(kappa.y_count.shape[0]))
@@ -231,7 +231,7 @@ Output:
 .. testoutput::
 
    Fleiss's kappa (stasmodels.stats.inter_rater): -0.14989733059548255
-   Fleiss's kappa (mtbp3.statlab): -0.14989733059548255
+   Fleiss's kappa (mtbp3Lab.statlab): -0.14989733059548255
    Number of raters per sample: 4.0
    Number of rating categories: 3
    Number of sample: 100

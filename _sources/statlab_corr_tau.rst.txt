@@ -160,7 +160,7 @@ Algorithm - 1
 
 **WARNING: FOR SMALL SAMPLE SIZES ONLY**
 
-Note that the algorithm in this section is implement in ``mtbp3.stalab`` for illustration purpose.
+Note that the algorithm in this section is implement in ``mtbp3Lab`` for illustration purpose.
 Although the matrix form is closely representing :eq:`eq_tau2`, 
 the calculation time increases greatly when the sample size increases.
 Other algorithms can be found in references.
@@ -181,18 +181,18 @@ Both tau-a and tau-b can be calculated using the following steps:
 How-to 
 =============
 
-To use ``mtbp3.corr``:
+To use ``mtbp3Lab``:
 
 .. code:: python
 
   import numpy as np
-  from mtbp3.corr import CorrCalculator
+  from mtbp3Lab.statlab.corr import CorrCalculator
 
   size = 100
   y1 = np.random.randint(1, size+1, size=size).tolist()
   y2 = np.subtract(np.random.randint(1, size+1, size=size),y1).tolist()
   t = CorrCalculator([y1,y2])
-  print("Kendall's tau (mtbp3.corr):", t.calculate_kendall_tau())
+  print("Kendall's tau (mtbp3Lab.corr):", t.calculate_kendall_tau())
 
 To create a scatter plot of ``y1`` and ``y2``:
 

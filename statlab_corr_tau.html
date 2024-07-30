@@ -243,7 +243,7 @@ The adjusted <span class="math notranslate nohighlight">\(\tau\)</span> (tau-b) 
 <section id="algorithm-1">
 <h2>Algorithm - 1<a class="headerlink" href="#algorithm-1" title="Link to this heading"></a></h2>
 <p><strong>WARNING: FOR SMALL SAMPLE SIZES ONLY</strong></p>
-<p>Note that the algorithm in this section is implement in <code class="docutils literal notranslate"><span class="pre">mtbp3.stalab</span></code> for illustration purpose.
+<p>Note that the algorithm in this section is implement in <code class="docutils literal notranslate"><span class="pre">mtbp3Lab</span></code> for illustration purpose.
 Although the matrix form is closely representing <a class="reference internal" href="#equation-eq-tau2">Eq. (10)</a>,
 the calculation time increases greatly when the sample size increases.
 Other algorithms can be found in references.</p>
@@ -261,15 +261,15 @@ Both tau-a and tau-b can be calculated using the following steps:</p>
 </ol>
 <section id="id5">
 <h3>How-to<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
-<p>To use <code class="docutils literal notranslate"><span class="pre">mtbp3.corr</span></code>:</p>
+<p>To use <code class="docutils literal notranslate"><span class="pre">mtbp3Lab</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">mtbp3.corr</span> <span class="kn">import</span> <span class="n">CorrCalculator</span>
+<span class="kn">from</span> <span class="nn">mtbp3Lab.statlab.corr</span> <span class="kn">import</span> <span class="n">CorrCalculator</span>
 
 <span class="n">size</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">),</span><span class="n">y1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">CorrCalculator</span><span class="p">([</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kendall&#39;s tau (mtbp3.corr):&quot;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">calculate_kendall_tau</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kendall&#39;s tau (mtbp3Lab.corr):&quot;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">calculate_kendall_tau</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>To create a scatter plot of <code class="docutils literal notranslate"><span class="pre">y1</span></code> and <code class="docutils literal notranslate"><span class="pre">y2</span></code>:</p>

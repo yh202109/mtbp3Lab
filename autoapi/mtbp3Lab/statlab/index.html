@@ -116,6 +116,9 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#mtbp3Lab.statlab.KappaCalculator" title="mtbp3Lab.statlab.KappaCalculator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KappaCalculator</span></code></a></p></td>
 <td><p>A class for calculating Cohen's kappa and Fleiss' kappa.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mtbp3Lab.statlab.CorrCalculator" title="mtbp3Lab.statlab.CorrCalculator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CorrCalculator</span></code></a></p></td>
+<td><p>A class for calculating correlation and plotting scatter plots.</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -200,6 +203,101 @@ If not provided, the default value is 100.</p>
 - None</p>
 <p>Raises:
 - None</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mtbp3Lab.statlab.CorrCalculator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mtbp3Lab.statlab.</span></span><span class="sig-name descname"><span class="pre">CorrCalculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_na</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/mtbp3Lab/statlab/corr.html#CorrCalculator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mtbp3Lab.statlab.CorrCalculator" title="Link to this definition"></a></dt>
+<dd><p>A class for calculating correlation and plotting scatter plots.</p>
+<p>Parameters:
+- y: A pandas DataFrame or a list</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If y is a pandas DataFrame, it must be a 2-dimensional DataFrame with at least 2 columns and 2 rows.</p></li>
+<li><p>If y is a list, it must be a list with at least 2 elements, where each element is a list of strings or numbers.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>remove_na: bool, optional (default=True)</dt><dd><ul>
+<li><p>If True, remove rows with missing values (NA) from the input data.</p></li>
+<li><p>If False, raise a ValueError if the input data contains missing values (NA).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Methods:
+- calculate_kendall_tau():</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Calculates the Kendall’s tau correlation coefficient between the first two columns of the input data.</p></li>
+<li><p>Returns the Kendall’s tau coefficient as a float.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>plot_y_list(loc=[0,1], axis_label=[‘x’,’y’]):</dt><dd><ul>
+<li><p>Plots a scatter plot of the input data.</p></li>
+<li><dl class="simple">
+<dt>loc: list, optional (default=[0,1])</dt><dd><ul>
+<li><p>The indices of the columns to be plotted on the x and y axes.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>axis_label: list, optional (default=[‘x’,’y’])</dt><dd><ul>
+<li><p>The labels for the x and y axes of the scatter plot.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="mtbp3Lab.statlab.CorrCalculator.__g">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mtbp3Lab.statlab.CorrCalculator.__g" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mtbp3Lab.statlab.CorrCalculator.calculate_kendall_tau">
+<span class="sig-name descname"><span class="pre">calculate_kendall_tau</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/mtbp3Lab/statlab/corr.html#CorrCalculator.calculate_kendall_tau"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mtbp3Lab.statlab.CorrCalculator.calculate_kendall_tau" title="Link to this definition"></a></dt>
+<dd><p>Calculates the Kendall’s tau correlation coefficient between the first two columns of the input data.</p>
+<p>Returns:
+- tau: float</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The Kendall’s tau correlation coefficient.</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mtbp3Lab.statlab.CorrCalculator.plot_y_list">
+<span class="sig-name descname"><span class="pre">plot_y_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">1]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['x',</span> <span class="pre">'y']</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/mtbp3Lab/statlab/corr.html#CorrCalculator.plot_y_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mtbp3Lab.statlab.CorrCalculator.plot_y_list" title="Link to this definition"></a></dt>
+<dd><p>Plots a scatter plot of the input data.</p>
+<p>Parameters:
+- loc: list, optional (default=[0,1])</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The indices of the columns to be plotted on the x and y axes.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>axis_label: list, optional (default=[‘x’,’y’])</dt><dd><ul>
+<li><p>The labels for the x and y axes of the scatter plot.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </dd></dl>
 
 </dd></dl>
