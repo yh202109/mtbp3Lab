@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mtbp3Lab"
+version = "0.1.1"
+dependencies = [
+  "pathlib",
+  "pandas",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Y. Hsu", email = "yh202109@gmail.com"},
+]
+maintainers = [
+  {name = "Y. Hsu", email = "yh202109@gmail.com"},
+]
+description = "My lab notes in Python 3"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["general tool box"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+]
+
+[project.urls]
+Homepage = "https://github.com/yh202109/mtbp3Lab"
+Documentation = "https://github.com/yh202109/mtbp3Lab/docs"
+Repository = "https://github.com/yh202109/mtbp3Lab.git"
+"Bug Tracker" = "https://github.com/yh202109/mtbp3Lab/issues"
+Changelog = "https://github.com/yh202109/mtbp3Lab/main/CHANGELOG.md"
+
+
+
