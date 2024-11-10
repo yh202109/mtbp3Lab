@@ -19,7 +19,7 @@
 .. role:: red
 
 #############
-StatLab/Corr/NP/Kendall's Tau 
+Correlation/NP/Kendall's Tau 
 #############
 
 :red-b:`Disclaimer:`
@@ -158,7 +158,9 @@ Lab Exercise
 Algorithm - 1
 *************
 
-**WARNING: FOR SMALL SAMPLE SIZES ONLY**
+Warning
+
+**FOR SMALL SAMPLE SIZES ONLY**
 
 Note that the algorithm in this section is implement in ``mtbp3Lab`` for illustration purpose.
 Although the matrix form is closely representing :eq:`eq_tau2`, 

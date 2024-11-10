@@ -19,7 +19,7 @@
 .. role:: red
 
 #############
-StatLab/Corr/NP/Spearman's Rho 
+Correlation/NP/Spearman's Rho 
 #############
 
 :red-b:`Disclaimer:`

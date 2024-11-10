@@ -21,10 +21,12 @@
 
 .. role:: bg-ltsteelblue
 
-
+.. contents:: Table of Contents
+  :depth: 2
+  :local:
 
 #############
-StatLab/Reli/Cohen's Kappa 
+SL/reliability,agreement/2s,paired,cate/Cohen's Kappa 
 #############
 
 :red-b:`Disclaimer:`
@@ -34,30 +36,32 @@ StatLab/Reli/Cohen's Kappa
 Background
 *************
 
-Cohen's kappa (:math:`\kappa`) is a statistic used for describing inter-ratter reliability of two ratters (or intra-rater) with categorical rating outcomes [1]_. 
-Please note that there are also additional considerations for the use of :math:`\kappa` for quantifying agreement [2]_ [3]_ .
+Cohen's kappa (:math:`\kappa`) is a statistic used for describing inter-rater reliability of two raters (or intra-rater) with categorical rating outcomes [1]_. 
+Please note that there are also additional considerations for the use of :math:`\kappa` for quantifying agreement [2]_ [3]_.
 
 *************
 Notation 
 *************
 
-For two ratters and two categories rating, let :math:`Y_{r,i} \in \{v_j; j=1,2\}` represent rating
-from rater :math:`r=1,2` for sample :math:`i = 1, \ldots, n`.
-Let :math:`N_{j_1,j_2}` represent the total number of sample received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,2\}`.
+For two raters and two category ratings, let :math:`Y_{r,i} \in \{v_j; j=1,2\}` represent the rating
+from rater :math:`r \in \{1,2\}` for sample :math:`i \in \{ 1, \ldots, n \}`.
+Let :math:`N_{j_1,j_2}` represent the total number of samples that received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,2\}`.
+See table-1_.
 
 .. list-table:: Counts for 2 categories
    :widths: 10 10 10 10
    :header-rows: 1
+   :name: table-1
 
    * - 
-     - Ratter 2: :math:`v_1`
-     - Ratter 2: :math:`v_2`
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
      - Row Total
-   * - **Ratter 1:** :math:`v_1`
+   * - **Rater 1:** :math:`v_1`
      - :math:`N_{11}`
      - :math:`N_{12}` 
      - :math:`N_{1\bullet}` 
-   * - **Ratter 1:**  :math:`v_2`
+   * - **Rater 1:**  :math:`v_2`
      - :math:`N_{21}`
      - :math:`N_{22}` 
      - :math:`N_{2\bullet}` 
@@ -66,33 +70,35 @@ Let :math:`N_{j_1,j_2}` represent the total number of sample received ratings :m
      - :math:`N_{\bullet 2}` 
      - :math:`n`
 
-For two ratters and three or more categories rating, let :math:`Y_{r,i} \in \{v_1,v_2,v_3, \ldots, v_J \}` represent rating 
-from rater :math:`r=1,2` for sample :math:`i = 1, \ldots, n`.
-Let :math:`N_{j_1,j_2}` represent the total number of sample received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,\ldots,J\}`.
+For two raters and three or more category ratings, let :math:`Y_{r,i} \in \{v_1,v_2,v_3, \ldots, v_J \}` represent the rating 
+from rater :math:`r \in \{1,2\}` for sample :math:`i \in \{ 1, \ldots, n \}`.
+Let :math:`N_{j_1,j_2}` represent the total number of samples that received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,\ldots,J\}`.
+See table-2_.
 
 .. list-table:: Counts for 3 or more categories
    :widths: 10 10 10 10 10 10
    :header-rows: 1
+   :name: table-2
 
    * - 
-     - Ratter 2: :math:`v_1`
-     - Ratter 2: :math:`v_2`
-     - Ratter 2: :math:`v_3`
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
+     - Rater 2: :math:`v_3`
      - :math:`\ldots` 
      - Row Total
-   * - **Ratter 1:** :math:`v_1`
+   * - **Rater 1:** :math:`v_1`
      - :math:`N_{11}`
      - :math:`N_{12}` 
      - :math:`N_{13}` 
      - :math:`\ldots` 
      - :math:`N_{1\bullet}` 
-   * - **Ratter 1:** :math:`v_2`
+   * - **Rater 1:** :math:`v_2`
      - :math:`N_{21}`
      - :math:`N_{22}` 
      - :math:`N_{23}` 
      - :math:`\ldots` 
      - :math:`N_{2\bullet}` 
-   * - **Ratter 1:** :math:`v_3`
+   * - **Rater 1:** :math:`v_3`
      - :math:`N_{31}`
      - :math:`N_{32}` 
      - :math:`N_{33}` 
@@ -218,14 +224,14 @@ Example - Group-1
    :header-rows: 1
 
    * - 
-     - Ratter 2: :math:`v_1`
-     - Ratter 2: :math:`v_2`
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
      - Row Total
-   * - **Ratter 1:** :math:`v_1`
+   * - **Rater 1:** :math:`v_1`
      - 9
      - 21
      - 30
-   * - **Ratter 1:** :math:`v_2`
+   * - **Rater 1:** :math:`v_2`
      - 21
      - 49
      - 70
@@ -239,14 +245,14 @@ Example - Group-1
    :header-rows: 1
 
    * - 
-     - Ratter 2: :math:`v_1`
-     - Ratter 2: :math:`v_2`
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
      - Row Total
-   * - **Ratter 1:** :math:`v_1`
+   * - **Rater 1:** :math:`v_1`
      - 49
      - 21
      - 70
-   * - **Ratter 1:** :math:`v_2`
+   * - **Rater 1:** :math:`v_2`
      - 21
      - 9
      - 30
@@ -260,14 +266,14 @@ Example - Group-1
    :header-rows: 1
 
    * - 
-     - Ratter 2: :math:`v_1`
-     - Ratter 2: :math:`v_2`
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
      - Row Total
-   * - **Ratter 1:** :math:`v_1`
+   * - **Rater 1:** :math:`v_1`
      - 30
      - 0
      - 30
-   * - **Ratter 1:** :math:`v_2`
+   * - **Rater 1:** :math:`v_2`
      - 0
      - 70
      - 70
@@ -281,14 +287,14 @@ Example - Group-1
    :header-rows: 1
 
    * - 
-     - Ratter 2: :math:`v_1`
-     - Ratter 2: :math:`v_2`
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
      - Row Total
-   * - **Ratter 1** :math:`v_1`
+   * - **Rater 1** :math:`v_1`
      - 50
      - 0
      - 50
-   * - **Ratter 1:** :math:`v_2`
+   * - **Rater 1:** :math:`v_2`
      - 0
      - 50
      - 50
@@ -302,14 +308,14 @@ Example - Group-1
    :header-rows: 1
 
    * - 
-     - Ratter 2: :math:`v_1` 
-     - Ratter 2: :math:`v_2`
+     - Rater 2: :math:`v_1` 
+     - Rater 2: :math:`v_2`
      - Row Total
-   * - **Ratter 1:** :math:`v_1`
+   * - **Rater 1:** :math:`v_1`
      - 0
      - 50
      - 50
-   * - **Ratter 1:** :math:`v_2`
+   * - **Rater 1:** :math:`v_2`
      - 50
      - 0
      - 50
@@ -323,14 +329,14 @@ Example - Group-1
    :header-rows: 1
 
    * - 
-     - Ratter 2: :math:`v_1`
-     - Ratter 2: :math:`v_2`
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
      - Row Total
-   * - **Ratter 1:** :math:`v_1`
+   * - **Rater 1:** :math:`v_1`
      - 0
      - 30
      - 30
-   * - **Ratter 1:** :math:`v_2`
+   * - **Rater 1:** :math:`v_2`
      - 70
      - 0
      - 70

@@ -6,15 +6,9 @@
 [![Tests Status](./_static/reports/junit/tests-badge.svg?dummy=8484744)](./_static/reports/junit/report.html)
 [![Coverage Status](./_static/reports/coverage/coverage-badge.svg?dummy=8484744)](./_static/reports/coverage/coverage.xml)
 
-My lab notes in Python.
+My StatLab notes in Python.
 
-Functions are grouped into:
-
-- StatLab<sup>*</sup>: 
-  - Correlation: `statlab.corr` 
-  - Reliability: `statlab.kappa`
-
-<sup>*</sup> Documents are not executed while building.
+Please find documentations [here](https://yh202109.github.io/mtbp3Lab/index.html).
 
 ## Table of Contents
 
@@ -42,8 +36,6 @@ import mtbp3Lab
 print(mtbp3.__version__)
 ``` 
 
-Please find more examples from the link [here](https://yh202109.github.io/mtbp3Lab/index.html).
-
 ## Contributing
 
 Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
@@ -65,7 +57,7 @@ Documentation:
 Hsu, Y. (2024). mtbp3Lab: My lab notes in Python [Software]. Retrieved from https://yh202109.github.io/mtbp3Lab/index.html.
 
 ```
-@software{mtbp3,
+@software{mtbp3Lab,
   author = {Hsu, Y.},
   title = {mtbp3Lab: My lab notes in Python},
   year = {2024},
