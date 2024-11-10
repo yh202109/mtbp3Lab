@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SL/reliability,agreement/2s,paired,cate/Cohen’s Kappa &mdash; mtbp3Lab  documentation</title>
+  <title>SL/reliability/2s,paired,cate/Cohen’s Kappa &mdash; mtbp3Lab  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -23,7 +23,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="SL/reliability,agreement/cate/Fleiss’s Kappa" href="statlab_kappa2.html" />
+    <link rel="next" title="SL/reliability/cate/Fleiss’s Kappa" href="statlab_kappa2.html" />
     <link rel="prev" title="mtbp3Lab" href="index.html" /> 
 </head>
 
@@ -47,7 +47,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">SL/reliability,agreement/2s,paired,cate/Cohen’s Kappa</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SL/reliability/2s,paired,cate/Cohen’s Kappa</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notation">Notation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#interpretation-of-cohen-s-kappa-suggested-in-literature">Interpretation of Cohen’s Kappa Suggested in Literature</a></li>
@@ -63,7 +63,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="statlab_kappa2.html">SL/reliability,agreement/cate/Fleiss’s Kappa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statlab_kappa2.html">SL/reliability/cate/Fleiss’s Kappa</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statlab_corr_tau.html">Correlation/NP/Kendall’s Tau</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statlab_corr_spearman_rho.html">Correlation/NP/Spearman’s Rho</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
@@ -86,7 +86,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">SL/reliability,agreement/2s,paired,cate/Cohen’s Kappa</li>
+      <li class="breadcrumb-item active">SL/reliability/2s,paired,cate/Cohen’s Kappa</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/statlab_kappa.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -96,35 +96,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <nav class="contents local" id="table-of-contents" role="doc-toc">
-<p class="topic-title">Table of Contents</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#sl-reliability-agreement-2s-paired-cate-cohen-s-kappa" id="id28">SL/reliability,agreement/2s,paired,cate/Cohen’s Kappa</a></p>
-<ul>
-<li><p><a class="reference internal" href="#background" id="id29">Background</a></p></li>
-<li><p><a class="reference internal" href="#notation" id="id30">Notation</a></p></li>
-<li><p><a class="reference internal" href="#interpretation-of-cohen-s-kappa-suggested-in-literature" id="id31">Interpretation of Cohen’s Kappa Suggested in Literature</a></p></li>
-<li><p><a class="reference internal" href="#example-group-1" id="id32">Example - Group-1</a></p></li>
-<li><p><a class="reference internal" href="#how-to" id="id33">How-to</a></p></li>
-<li><p><a class="reference internal" href="#lab-exercise" id="id34">Lab Exercise</a></p></li>
-<li><p><a class="reference internal" href="#extensions" id="id35">Extensions</a></p></li>
-<li><p><a class="reference internal" href="#weighted-kappa" id="id36">Weighted <span class="math notranslate nohighlight">\(\kappa\)</span></a></p></li>
-<li><p><a class="reference internal" href="#reference" id="id37">Reference</a></p></li>
-</ul>
-</li>
-</ul>
-</nav>
-<section id="sl-reliability-agreement-2s-paired-cate-cohen-s-kappa">
-<h1><a class="toc-backref" href="#id28" role="doc-backlink">SL/reliability,agreement/2s,paired,cate/Cohen’s Kappa</a><a class="headerlink" href="#sl-reliability-agreement-2s-paired-cate-cohen-s-kappa" title="Link to this heading"></a></h1>
+  <section id="sl-reliability-2s-paired-cate-cohen-s-kappa">
+<h1>SL/reliability/2s,paired,cate/Cohen’s Kappa<a class="headerlink" href="#sl-reliability-2s-paired-cate-cohen-s-kappa" title="Link to this heading"></a></h1>
 <p><span class="red-b">Disclaimer:</span>
 <span class="red">This page is provided only for studying and practicing. The author does not intend to promote or advocate any particular analysis method or software.</span></p>
 <section id="background">
-<h2><a class="toc-backref" href="#id29" role="doc-backlink">Background</a><a class="headerlink" href="#background" title="Link to this heading"></a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading"></a></h2>
 <p>Cohen’s kappa (<span class="math notranslate nohighlight">\(\kappa\)</span>) is a statistic used for describing inter-rater reliability of two raters (or intra-rater) with categorical rating outcomes <a class="footnote-reference brackets" href="#id10" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
 Please note that there are also additional considerations for the use of <span class="math notranslate nohighlight">\(\kappa\)</span> for quantifying agreement <a class="footnote-reference brackets" href="#id11" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id12" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="notation">
-<h2><a class="toc-backref" href="#id30" role="doc-backlink">Notation</a><a class="headerlink" href="#notation" title="Link to this heading"></a></h2>
+<h2>Notation<a class="headerlink" href="#notation" title="Link to this heading"></a></h2>
 <p>For two raters and two category ratings, let <span class="math notranslate nohighlight">\(Y_{r,i} \in \{v_j; j=1,2\}\)</span> represent the rating
 from rater <span class="math notranslate nohighlight">\(r \in \{1,2\}\)</span> for sample <span class="math notranslate nohighlight">\(i \in \{ 1, \ldots, n \}\)</span>.
 Let <span class="math notranslate nohighlight">\(N_{j_1,j_2}\)</span> represent the total number of samples that received ratings <span class="math notranslate nohighlight">\((v_{j_1}, v_{j_2})\)</span> from two raters, where <span class="math notranslate nohighlight">\(j_1,j_2 \in \{1,2\}\)</span>.
@@ -245,7 +227,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 \[\sqrt{\frac{p_O(1-p_O)}{n(1-p_E)^2}}.\]</div>
 </section>
 <section id="interpretation-of-cohen-s-kappa-suggested-in-literature">
-<h2><a class="toc-backref" href="#id31" role="doc-backlink">Interpretation of Cohen’s Kappa Suggested in Literature</a><a class="headerlink" href="#interpretation-of-cohen-s-kappa-suggested-in-literature" title="Link to this heading"></a></h2>
+<h2>Interpretation of Cohen’s Kappa Suggested in Literature<a class="headerlink" href="#interpretation-of-cohen-s-kappa-suggested-in-literature" title="Link to this heading"></a></h2>
 <p>There are several groups of interpretation. Some roughly (not-strictly) defined types are listed below:</p>
 <ol class="arabic simple">
 <li><p>Table based interpretation: a shared interpretation simplifies application process and provides a easy to compare values.</p></li>
@@ -333,7 +315,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 <p>As discussed by Sim and Wright <a class="footnote-reference brackets" href="#id15" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> , biases and other factors could have impact on the interpretation.</p>
 </section>
 <section id="example-group-1">
-<h2><a class="toc-backref" href="#id32" role="doc-backlink">Example - Group-1</a><a class="headerlink" href="#example-group-1" title="Link to this heading"></a></h2>
+<h2>Example - Group-1<a class="headerlink" href="#example-group-1" title="Link to this heading"></a></h2>
 <table class="docutils align-default" id="id22">
 <caption><span class="caption-number">Table 5 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0\)</span></span><a class="headerlink" href="#id22" title="Link to this table"></a></caption>
 <colgroup>
@@ -534,7 +516,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 </table>
 </section>
 <section id="how-to">
-<h2><a class="toc-backref" href="#id33" role="doc-backlink">How-to</a><a class="headerlink" href="#how-to" title="Link to this heading"></a></h2>
+<h2>How-to<a class="headerlink" href="#how-to" title="Link to this heading"></a></h2>
 <p>To use <code class="docutils literal notranslate"><span class="pre">sklearn.metrics</span></code> (stable):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">cohen_kappa_score</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">70</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;v1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">30</span>
@@ -611,7 +593,7 @@ To put agreed counts on the -45 degree line:</p>
 </section>
 </section>
 <section id="lab-exercise">
-<h2><a class="toc-backref" href="#id34" role="doc-backlink">Lab Exercise</a><a class="headerlink" href="#lab-exercise" title="Link to this heading"></a></h2>
+<h2>Lab Exercise<a class="headerlink" href="#lab-exercise" title="Link to this heading"></a></h2>
 <p>Assume that there are two raters responsible for rating 2 studies with a sample size of 100 for each study.
 Assume that the you are tasked with studying the characteristics of <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
 <p>For the first study, the first rater completed the rating with marginal rates
@@ -629,7 +611,7 @@ and filled out the rest with random ratings following the same distribution as t
 </ol>
 </section>
 <section id="extensions">
-<h2><a class="toc-backref" href="#id35" role="doc-backlink">Extensions</a><a class="headerlink" href="#extensions" title="Link to this heading"></a></h2>
+<h2>Extensions<a class="headerlink" href="#extensions" title="Link to this heading"></a></h2>
 <p>Some scenarios discussed by Hallgren (2012) <a class="footnote-reference brackets" href="#id18" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a> include:</p>
 <ul class="simple">
 <li><p>the <strong>prevalence</strong> problem: one category has much higher percentage than other categories and causes <span class="math notranslate nohighlight">\(\kappa\)</span> to be low.</p></li>
@@ -639,7 +621,7 @@ and filled out the rest with random ratings following the same distribution as t
 <p>(Please note that this is not an exhaustive list.)</p>
 </section>
 <section id="weighted-kappa">
-<h2><a class="toc-backref" href="#id36" role="doc-backlink">Weighted <span class="math notranslate nohighlight">\(\kappa\)</span></a><a class="headerlink" href="#weighted-kappa" title="Link to this heading"></a></h2>
+<h2>Weighted <span class="math notranslate nohighlight">\(\kappa\)</span><a class="headerlink" href="#weighted-kappa" title="Link to this heading"></a></h2>
 <p>Let <span class="math notranslate nohighlight">\(w_{j_1,j_2}\)</span> represent the weight given to total number of sample received ratings <span class="math notranslate nohighlight">\((v_{j_1}, v_{j_2})\)</span> from two raters, where <span class="math notranslate nohighlight">\(j_1,j_2 \in \{1,\ldots,J\}\)</span>.
 The weighted <span class="math notranslate nohighlight">\(\kappa\)</span> is calculated as</p>
 <div class="math notranslate nohighlight">
@@ -647,7 +629,7 @@ The weighted <span class="math notranslate nohighlight">\(\kappa\)</span> is cal
 <p>(There shall be another page discussing weighted methods and variations)</p>
 </section>
 <section id="reference">
-<h2><a class="toc-backref" href="#id37" role="doc-backlink">Reference</a><a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id10" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
@@ -698,7 +680,7 @@ The weighted <span class="math notranslate nohighlight">\(\kappa\)</span> is cal
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="mtbp3Lab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="statlab_kappa2.html" class="btn btn-neutral float-right" title="SL/reliability,agreement/cate/Fleiss’s Kappa" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="statlab_kappa2.html" class="btn btn-neutral float-right" title="SL/reliability/cate/Fleiss’s Kappa" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

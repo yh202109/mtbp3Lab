@@ -21,12 +21,8 @@
 
 .. role:: bg-ltsteelblue
 
-.. contents:: Table of Contents
-  :depth: 2
-  :local:
-
 #############
-SL/reliability,agreement/2s,paired,cate/Cohen's Kappa 
+SL/reliability/2s,paired,cate/Cohen's Kappa 
 #############
 
 :red-b:`Disclaimer:`
