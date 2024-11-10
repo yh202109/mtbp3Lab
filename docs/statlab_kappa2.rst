@@ -19,7 +19,7 @@
 .. role:: red
 
 #############
-SL/reliability/cate/Fleiss's Kappa  
+Reliability/cate/Fleiss's Kappa  
 #############
 
 :red-b:`Disclaimer:`
