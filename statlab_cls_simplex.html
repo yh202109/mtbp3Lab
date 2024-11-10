@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classification/Multinomial and Simplex &mdash; mtbp3Lab  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=ce7ddcad" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            mtbp3Lab
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="statlab_kappa.html">SL/reliability,agreement/2s,paired,cate/Cohen’s Kappa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statlab_kappa2.html">SL/reliability,agreement/cate/Fleiss’s Kappa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statlab_corr_tau.html">Correlation/NP/Kendall’s Tau</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statlab_corr_spearman_rho.html">Correlation/NP/Spearman’s Rho</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conduct.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mtbp3Lab</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Classification/Multinomial and Simplex</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/statlab_cls_simplex.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="classification-multinomial-and-simplex">
+<h1>Classification/Multinomial and Simplex<a class="headerlink" href="#classification-multinomial-and-simplex" title="Link to this heading"></a></h1>
+<p><span class="red-b">Disclaimer:</span>
+<span class="red">This page is provided only for studying and practicing. The author does not intend to promote or advocate any particular analysis method or software.</span></p>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading"></a></h2>
+<p>For multi-class classification, the sum of probability of individual classes is restricted to one <a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+This page includes discussions related to the space of probability values on a simplex.</p>
+</section>
+<section id="notation">
+<h2>Notation<a class="headerlink" href="#notation" title="Link to this heading"></a></h2>
+<p>Let <span class="math notranslate nohighlight">\(Y_{i}=c\)</span> be the class (group) of the <span class="math notranslate nohighlight">\(i\)</span> th sample
+for <span class="math notranslate nohighlight">\(i = 1, \ldots, n\)</span>,
+with class value <span class="math notranslate nohighlight">\(c \in \{c_1,\ldots, c_K\}\)</span>,
+<span class="math notranslate nohighlight">\(P(Y_i = c_k) = p_k\)</span>,
+<span class="math notranslate nohighlight">\(p_k \in [0,1]\)</span> for all <span class="math notranslate nohighlight">\(k\)</span>,
+and <span class="math notranslate nohighlight">\(\sum_k p_k=1\)</span>.
+Let <span class="math notranslate nohighlight">\(N_k = \sum_{i=1}^n I(Y_i = c_k)\)</span>,
+<span class="math notranslate nohighlight">\(N = (N_1, \ldots, N_K)\)</span> with <span class="math notranslate nohighlight">\(N_k \geq 0\)</span> and <span class="math notranslate nohighlight">\(\sum_k N_k = n\)</span>.
+The vector <span class="math notranslate nohighlight">\(N\)</span> is a <span class="math notranslate nohighlight">\(K\)</span> components compositional data point.
+Let <span class="math notranslate nohighlight">\(\hat{p} = (\hat{p}_1, \ldots, \hat{p}_K) \in [0,1]^K\)</span> with <span class="math notranslate nohighlight">\(\sum_k \hat{p}_k = 1\)</span>.
+The value space of <span class="math notranslate nohighlight">\(\{\hat{p}\}\)</span> is a <span class="math notranslate nohighlight">\((K-1)\)</span>-dimensional standard (normalized) simplex <a class="footnote-reference brackets" href="#id6" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="example-group-1">
+<h2>Example - Group-1<a class="headerlink" href="#example-group-1" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="tbl-ex1">
+<caption><span class="caption-text">Spearman’s <span class="math notranslate nohighlight">\(\rho = 1.0\)</span></span><a class="headerlink" href="#tbl-ex1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Y_{i1}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Y_{i2}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Sample:</strong> 1</p></td>
+<td><p>1</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sample:</strong> 2</p></td>
+<td><p>3</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Sample:</strong> 3</p></td>
+<td><p>2</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Spearman’s <span class="math notranslate nohighlight">\(\rho = -1.0\)</span></span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Y_{i1}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Y_{i2}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Sample:</strong> 1</p></td>
+<td><p>1</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sample:</strong> 2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Sample:</strong> 3</p></td>
+<td><p>2</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-to">
+<h2>How-to<a class="headerlink" href="#how-to" title="Link to this heading"></a></h2>
+<p>To use <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code> <a class="footnote-reference brackets" href="#id7" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">spearmanr</span>
+
+<span class="n">y1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="n">rho</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">spearmanr</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Spearman&#39;s rho:&quot;</span><span class="p">,</span> <span class="n">rho</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="more-details">
+<h2>More Details<a class="headerlink" href="#more-details" title="Link to this heading"></a></h2>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Djalil CHAFAÏ. (2013). Back to basics - Multinomial law. <a class="reference external" href="https://djalil.chafai.net/blog/2013/05/26/back-to-basics-multinomial-law/">https://djalil.chafai.net/blog/2013/05/26/back-to-basics-multinomial-law/</a></p>
+</aside>
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>wiki. (year). Compositional data. <a class="reference external" href="https://en.wikipedia.org/wiki/Compositional_data">https://en.wikipedia.org/wiki/Compositional_data</a></p>
+</aside>
+<aside class="footnote brackets" id="id7" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>John Aitchison. (1994). Principles of compositional data analysis. Institute of Mathematical Statistics Lecture Notes - Monograph Series Vol. 24, 73-81. <a class="reference external" href="https://doi.org/10.1214/lnms/1215463786">https://doi.org/10.1214/lnms/1215463786</a></p>
+</aside>
+<aside class="footnote brackets" id="id8" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<p>Michael Greenacre, Eric Grunsky, John Bacon-Shone, Ionas Erb, Thomas Quinn. (2023). Aitchison’s Compositional Data Analysis 40 Years on: A Reappraisal. Statistical Science, Statist. Sci. 38(3), 386-410. <a class="reference external" href="https://projecteuclid.org/journals/statistical-science/volume-38/issue-3/Aitchisons-Compositional-Data-Analysis-40-Years-on-A-Reappraisal/10.1214/22-STS880.short">https://projecteuclid.org/journals/statistical-science/volume-38/issue-3/Aitchisons-Compositional-Data-Analysis-40-Years-on-A-Reappraisal/10.1214/22-STS880.short</a></p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Y. Hsu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

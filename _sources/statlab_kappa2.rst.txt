@@ -19,7 +19,7 @@
 .. role:: red
 
 #############
-StatLab/Reli/Fleiss's Kappa  
+SL/reliability,agreement/cate/Fleiss's Kappa  
 #############
 
 :red-b:`Disclaimer:`

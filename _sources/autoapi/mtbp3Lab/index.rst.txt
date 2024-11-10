@@ -10,8 +10,8 @@ mtbp3Lab
 
 
 
-Subpackages
------------
+Submodules
+----------
 
 .. toctree::
    :maxdepth: 1
