@@ -42,15 +42,14 @@ Notation
 For two raters and two category ratings, let :math:`Y_{r,i} \in \{v_j; j=1,2\}` represent the rating
 from rater :math:`r \in \{1,2\}` for sample :math:`i \in \{ 1, \ldots, n \}`.
 Let :math:`N_{j_1,j_2}` represent the total number of samples that received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,2\}`.
-See :ref:`table-1`_.
+See table-1_.
 
 
-.. _table-1:
 
 .. list-table:: Counts for 2 categories
    :widths: 10 10 10 10
    :header-rows: 1
-   :label: table-1
+   :name: table-1
 
    * - 
      - Rater 2: :math:`v_1`
@@ -77,7 +76,7 @@ See table-2_.
 .. list-table:: Counts for 3 or more categories
    :widths: 10 10 10 10 10 10
    :header-rows: 1
-   :label: table-2
+   :name: table-2
 
    * - 
      - Rater 2: :math:`v_1`
