@@ -42,7 +42,7 @@ Notation
 For two raters and two category ratings, let :math:`Y_{r,i} \in \{v_j; j=1,2\}` represent the rating
 from rater :math:`r \in \{1,2\}` for sample :math:`i \in \{ 1, \ldots, n \}`.
 Let :math:`N_{j_1,j_2}` represent the total number of samples that received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,2\}`.
-See :ref:`table-1`.
+See :ref:`table-1`_.
 
 
 .. _table-1:
@@ -151,6 +151,7 @@ The SE of :math:`\kappa` is calculated as
 
 .. math::
   \sqrt{\frac{p_O(1-p_O)}{n(1-p_E)^2}}.
+
 
 *************
 Interpretation of Cohen's Kappa Suggested in Literature
