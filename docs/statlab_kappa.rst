@@ -22,7 +22,7 @@
 .. role:: bg-ltsteelblue
 
 #############
-Reliability/2s,paired,cate/Cohen's Kappa 
+Reliability/cate/Cohen's Kappa 
 #############
 
 :red-b:`Disclaimer:`
