@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SL/reliability/2s,paired,cate/Cohen’s Kappa &mdash; mtbp3Lab  documentation</title>
+  <title>Reliability/2s,paired,cate/Cohen’s Kappa &mdash; mtbp3Lab  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -47,7 +47,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">SL/reliability/2s,paired,cate/Cohen’s Kappa</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reliability/2s,paired,cate/Cohen’s Kappa</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notation">Notation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#interpretation-of-cohen-s-kappa-suggested-in-literature">Interpretation of Cohen’s Kappa Suggested in Literature</a></li>
@@ -86,7 +86,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">SL/reliability/2s,paired,cate/Cohen’s Kappa</li>
+      <li class="breadcrumb-item active">Reliability/2s,paired,cate/Cohen’s Kappa</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/statlab_kappa.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -96,8 +96,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="sl-reliability-2s-paired-cate-cohen-s-kappa">
-<h1>SL/reliability/2s,paired,cate/Cohen’s Kappa<a class="headerlink" href="#sl-reliability-2s-paired-cate-cohen-s-kappa" title="Link to this heading"></a></h1>
+  <section id="reliability-2s-paired-cate-cohen-s-kappa">
+<h1>Reliability/2s,paired,cate/Cohen’s Kappa<a class="headerlink" href="#reliability-2s-paired-cate-cohen-s-kappa" title="Link to this heading"></a></h1>
 <p><span class="red-b">Disclaimer:</span>
 <span class="red">This page is provided only for studying and practicing. The author does not intend to promote or advocate any particular analysis method or software.</span></p>
 <section id="background">
@@ -110,101 +110,11 @@ Please note that there are also additional considerations for the use of <span c
 <p>For two raters and two category ratings, let <span class="math notranslate nohighlight">\(Y_{r,i} \in \{v_j; j=1,2\}\)</span> represent the rating
 from rater <span class="math notranslate nohighlight">\(r \in \{1,2\}\)</span> for sample <span class="math notranslate nohighlight">\(i \in \{ 1, \ldots, n \}\)</span>.
 Let <span class="math notranslate nohighlight">\(N_{j_1,j_2}\)</span> represent the total number of samples that received ratings <span class="math notranslate nohighlight">\((v_{j_1}, v_{j_2})\)</span> from two raters, where <span class="math notranslate nohighlight">\(j_1,j_2 \in \{1,2\}\)</span>.
-See <a class="reference internal" href="#table-1">table-1</a>.</p>
-<table class="docutils align-default" id="table-1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#table-1" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 25.0%" />
-<col style="width: 25.0%" />
-<col style="width: 25.0%" />
-<col style="width: 25.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"></th>
-<th class="head"><p>Rater 2: <span class="math notranslate nohighlight">\(v_1\)</span></p></th>
-<th class="head"><p>Rater 2: <span class="math notranslate nohighlight">\(v_2\)</span></p></th>
-<th class="head"><p>Row Total</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Rater 1:</strong> <span class="math notranslate nohighlight">\(v_1\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{11}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{12}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{1\bullet}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Rater 1:</strong>  <span class="math notranslate nohighlight">\(v_2\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{21}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{22}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{2\bullet}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Column Total</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{\bullet 1}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{\bullet 2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(n\)</span></p></td>
-</tr>
-</tbody>
-</table>
-<p>For two raters and three or more category ratings, let <span class="math notranslate nohighlight">\(Y_{r,i} \in \{v_1,v_2,v_3, \ldots, v_J \}\)</span> represent the rating
+See <span class="xref std std-ref">table-1</span>.</p>
+<p id="table-1">For two raters and three or more category ratings, let <span class="math notranslate nohighlight">\(Y_{r,i} \in \{v_1,v_2,v_3, \ldots, v_J \}\)</span> represent the rating
 from rater <span class="math notranslate nohighlight">\(r \in \{1,2\}\)</span> for sample <span class="math notranslate nohighlight">\(i \in \{ 1, \ldots, n \}\)</span>.
 Let <span class="math notranslate nohighlight">\(N_{j_1,j_2}\)</span> represent the total number of samples that received ratings <span class="math notranslate nohighlight">\((v_{j_1}, v_{j_2})\)</span> from two raters, where <span class="math notranslate nohighlight">\(j_1,j_2 \in \{1,\ldots,J\}\)</span>.
-See <a class="reference internal" href="#table-2">table-2</a>.</p>
-<table class="docutils align-default" id="table-2">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">Counts for 3 or more categories</span><a class="headerlink" href="#table-2" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"></th>
-<th class="head"><p>Rater 2: <span class="math notranslate nohighlight">\(v_1\)</span></p></th>
-<th class="head"><p>Rater 2: <span class="math notranslate nohighlight">\(v_2\)</span></p></th>
-<th class="head"><p>Rater 2: <span class="math notranslate nohighlight">\(v_3\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></th>
-<th class="head"><p>Row Total</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Rater 1:</strong> <span class="math notranslate nohighlight">\(v_1\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{11}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{12}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{13}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{1\bullet}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Rater 1:</strong> <span class="math notranslate nohighlight">\(v_2\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{21}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{22}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{23}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{2\bullet}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Rater 1:</strong> <span class="math notranslate nohighlight">\(v_3\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{31}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{32}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{33}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{3\bullet}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ddots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Column Total</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{\bullet 1}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{\bullet 2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{\bullet 3}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(n\)</span></p></td>
-</tr>
-</tbody>
-</table>
+See <a href="#id28"><span class="problematic" id="id29">table-2_</span></a>.</p>
 <p>The observed raw percentage of agreement is defined as</p>
 <div class="math notranslate nohighlight">
 \[p_O = \sum_{j=1}^J N_{jj} / n\]</div>
@@ -220,8 +130,8 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 <p>Under independence assumption, the expected number of agreement is estimated by
 <span class="math notranslate nohighlight">\(\sum_{j=1}^J\hat{E}_{j} = \frac{1}{n}\sum_{j=1}^J N_{\bullet j} N_{j\bullet} \equiv n p_E\)</span>.</p>
 <p>The Cohen’s <span class="math notranslate nohighlight">\(\kappa\)</span> statistic is calculated as</p>
-<div class="math notranslate nohighlight">
-\[\kappa = \frac{p_O - p_E}{1-p_E}.\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-kappa1-kappa">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-kappa1-kappa" title="Link to this equation"></a></span>\[\kappa = \frac{p_O - p_E}{1-p_E}.\]</div>
 <p>The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calculated as</p>
 <div class="math notranslate nohighlight">
 \[\sqrt{\frac{p_O(1-p_O)}{n(1-p_E)^2}}.\]</div>
@@ -236,7 +146,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 </ol>
 <p>Cohen (1960) <a class="footnote-reference brackets" href="#id13" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> suggested the Kappa result be interpreted as follows:</p>
 <table class="docutils align-default" id="id20">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">Cohen’s Kappa Interpretation (Cohen, 1960)</span><a class="headerlink" href="#id20" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Cohen’s Kappa Interpretation (Cohen, 1960)</span><a class="headerlink" href="#id20" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -269,7 +179,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 </table>
 <p>Interpretation suggested by McHugh (2012) <a class="footnote-reference brackets" href="#id14" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>:</p>
 <table class="docutils align-default" id="id21">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Cohen’s Kappa Interpretation (McHugh, 2012)</span><a class="headerlink" href="#id21" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Cohen’s Kappa Interpretation (McHugh, 2012)</span><a class="headerlink" href="#id21" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -317,7 +227,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 <section id="example-group-1">
 <h2>Example - Group-1<a class="headerlink" href="#example-group-1" title="Link to this heading"></a></h2>
 <table class="docutils align-default" id="id22">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0\)</span></span><a class="headerlink" href="#id22" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0\)</span></span><a class="headerlink" href="#id22" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -350,7 +260,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 </tbody>
 </table>
 <table class="docutils align-default" id="id23">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0\)</span></span><a class="headerlink" href="#id23" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0\)</span></span><a class="headerlink" href="#id23" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -383,7 +293,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 </tbody>
 </table>
 <table class="docutils align-default" id="id24">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 1\)</span></span><a class="headerlink" href="#id24" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 1\)</span></span><a class="headerlink" href="#id24" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -416,7 +326,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 </tbody>
 </table>
 <table class="docutils align-default" id="id25">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 1\)</span></span><a class="headerlink" href="#id25" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = 1\)</span></span><a class="headerlink" href="#id25" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -449,7 +359,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 </tbody>
 </table>
 <table class="docutils align-default" id="id26">
-<caption><span class="caption-number">Table 9 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = -1\)</span></span><a class="headerlink" href="#id26" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = -1\)</span></span><a class="headerlink" href="#id26" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -482,7 +392,7 @@ and <span class="math notranslate nohighlight">\(\sum_j p_{r=1,j} = \sum_j p_{r=
 </tbody>
 </table>
 <table class="docutils align-default" id="id27">
-<caption><span class="caption-number">Table 10 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = -0.7241379310344827\)</span></span><a class="headerlink" href="#id27" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">Cohen’s <span class="math notranslate nohighlight">\(\kappa = -0.7241379310344827\)</span></span><a class="headerlink" href="#id27" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
