@@ -108,8 +108,8 @@ For two raters and two categories (:math:`J=2`), Byrt et al. define Bias Index (
 
 :math:`\hat{BI}` has the following properties:
 
-- when two off-diagonal counts are equal, which means :math:`N_{12} = N_{21}`, then :math:`\hat{BI} = 0`,
-- when two raters have the same frequencies of ratings, which means :math:`N_{1 \bullet} = N_{\bullet 1}`, and  :math:` N_{11}+N_{12} = N_{11}+N_{21}`, then :math:`\hat{BI} = 0`, and
+- when two off-diagonal counts are equal, which means :math:`N_{12} = N_{21}`, then :math:`\hat{BI} = 0`;
+- when two raters have the same frequencies of ratings, which means :math:`N_{1 \bullet} = N_{\bullet 1}`, and  :math:`N_{11}+N_{12} = N_{11}+N_{21}`, then :math:`\hat{BI} = 0`; 
 - when :math:`N_{12} = n` or :math:`N_{21}=n`, :math:`|\hat{BI}|=1`.
 
 
