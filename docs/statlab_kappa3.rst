@@ -47,7 +47,7 @@ See table-1_.
 .. list-table:: Counts for 3 or more categories
    :widths: 10 10 10 10 10 10
    :header-rows: 1
-   :name: table-1
+   :label: table-1
 
    * - 
      - Rater 2: :math:`v_1`
@@ -96,7 +96,7 @@ The SE of :math:`\kappa` is calculated as :math:`\sqrt{\frac{p_O(1-p_O)}{n(1-p_E
 Bias, Prevalence and Adjusted Kappas
 *************
 
-All discussions in this section are based on Byrt, T., Bishop, J., & Carlin, J. B. (1993) [1]_ [2]_ [3]_.
+All discussion in this section are based on Byrt, T., Bishop, J., & Carlin, J. B. (1993) [1]_ [2]_ [3]_.
 
 Bias Index (BI) 
 =============
@@ -225,7 +225,7 @@ and
   p_O^{(BAPA)} = \frac{1}{n} \left( N_{11}^{(PA)} + N_{22}^{(PA)} \right) = \frac{1}{n} \left( N_{11} + N_{22} \right) = p_O.
 
 
-Therefore, the :math:`kappa` value based on table-2_ can be calculated as:
+Therefore, the :math:`\kappa` value based on table-2_ can be calculated as:
 
 .. math::
   \kappa^{(BAPA)} = \frac{p_O - 0.5}{1 - 0.5} = 2p_O - 1,
