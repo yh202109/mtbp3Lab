@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"mtbp3Lab"
+project = u"mtbp3"
 copyright = u"2024, Y. Hsu"
 author = u"Y. Hsu"
 
@@ -24,13 +24,18 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.doctest",
 ]
-autoapi_dirs = ["../mtbp3Lab"]
+autoapi_dirs = ["../mtbp3"]
 mathjax_path = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
 imgmath_image_format = 'svg'
 numfig = True
 math_numfig = True
 numfig_secnum_depth = 2
 math_eqref_format = "Eq. ({number})"
+numfig_format = {
+    'figure': 'Fig. %s',
+    'section': 'Section',
+    'table': 'Table %s',
+}
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
