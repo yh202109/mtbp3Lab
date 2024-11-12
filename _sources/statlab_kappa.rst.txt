@@ -42,14 +42,13 @@ Notation
 For two raters and two category ratings, let :math:`Y_{r,i} \in \{v_j; j=1,2\}` represent the rating
 from rater :math:`r \in \{1,2\}` for sample :math:`i \in \{ 1, \ldots, n \}`.
 Let :math:`N_{j_1,j_2}` represent the total number of samples that received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,2\}`.
-See table-1_.
+See :numref:`table-kappa1-1`.
 
-
+.. _table-kappa1-1:
 
 .. list-table:: Counts for 2 categories
    :widths: 10 10 10 10
    :header-rows: 1
-   :name: table-1
 
    * - 
      - Rater 2: :math:`v_1`
@@ -71,12 +70,13 @@ See table-1_.
 For two raters and three or more category ratings, let :math:`Y_{r,i} \in \{v_1,v_2,v_3, \ldots, v_J \}` represent the rating 
 from rater :math:`r \in \{1,2\}` for sample :math:`i \in \{ 1, \ldots, n \}`.
 Let :math:`N_{j_1,j_2}` represent the total number of samples that received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,\ldots,J\}`.
-See table-2_.
+See :numref:`table-kappa1-2`.
+
+.. _table-kappa1-2:
 
 .. list-table:: Counts for 3 or more categories
    :widths: 10 10 10 10 10 10
    :header-rows: 1
-   :name: table-2
 
    * - 
      - Rater 2: :math:`v_1`
@@ -118,7 +118,6 @@ See table-2_.
 The observed raw percentage of agreement is defined as 
 
 .. math::
-
   p_O = \sum_{j=1}^J N_{jj} / n
 
 where :math:`J \geq 2` is the size of value set.

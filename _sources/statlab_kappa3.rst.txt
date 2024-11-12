@@ -132,12 +132,13 @@ and
 .. math::
   N_{2 \bullet}^{(BA)} = N_{\bullet 2}^{(BA)} = N_{22} + \frac{1}{2}(N_{12} + N_{21}).
 
-See table-1_.
+See :numref:`table-kappa3-2.
+
+.. _table-kappa3-2:
 
 .. list-table:: Counts for 2 categories
    :widths: 10 10 10 10
    :header-rows: 1
-   :name: table-1
 
    * - 
      - Rater 2: :math:`v_1`
@@ -191,12 +192,13 @@ and
 .. math::
   N_{2 \bullet}^{(BAPA)} = N_{\bullet 2}^{(BAPA)} = \frac{n}{2}
 
-See illustration in table-2_.
+See illustration in :numref:`table-kappa3-3`.
+
+.. _table-kappa3-3:
 
 .. list-table:: Counts for 2 categories
    :widths: 10 10 10 10
    :header-rows: 1
-   :name: table-2
 
    * - 
      - Rater 2: :math:`v_1`
