@@ -104,7 +104,7 @@ Bias Index (BI)
 For two raters and two categories (:math:`J=2`), Byrt et al. define Bias Index (BI) as difference of probability of one rating from two raters, which can be estimated as:
 
 .. math::
-  \hat{BI} = N_{1 \bullet}/n - N_{\bullet 1}/n = \frac{1}{n}(N_{12} - N_{21}).
+  \hat{BI} = \frac{1}{n}(N_{1 \bullet} - N_{\bullet 1}) = \frac{1}{n}(N_{12} - N_{21}).
 
 :math:`\hat{BI}` has the following properties:
 
