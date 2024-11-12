@@ -100,7 +100,7 @@
 <span class="red">This page is provided only for studying and practicing. The author does not intend to promote or advocate any particular analysis method or software.</span></p>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Link to this heading"></a></h2>
-<p>Cohen’s kappa (<span class="math notranslate nohighlight">\(\kappa\)</span>) is a statistic used for describing inter-rater reliability of two raters (or intra-rater) with categorical rating outcomes <a class="footnote-reference brackets" href="#id6" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+<p>Cohen’s kappa (<span class="math notranslate nohighlight">\(\kappa\)</span>) is a statistic used for describing inter-rater reliability of two raters (or intra-rater) with categorical rating outcomes <a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
 This page discusses some variations.</p>
 </section>
 <section id="notation">
@@ -108,64 +108,7 @@ This page discusses some variations.</p>
 <p>For two raters and two or more category ratings, let <span class="math notranslate nohighlight">\(Y_{r,i} \in \{v_1,\ldots, v_J \}\)</span> represent the rating
 from rater <span class="math notranslate nohighlight">\(r \in \{1,2\}\)</span> for sample <span class="math notranslate nohighlight">\(i \in \{ 1, \ldots, n \}\)</span>.
 Let <span class="math notranslate nohighlight">\(N_{j_1,j_2}\)</span> represent the total number of samples that received ratings <span class="math notranslate nohighlight">\((v_{j_1}, v_{j_2})\)</span> from two raters, where <span class="math notranslate nohighlight">\(j_1,j_2 \in \{1,\ldots,J\}\)</span>.
-See <a href="#id9"><span class="problematic" id="id10">table-1_</span></a>.</p>
-<table class="docutils align-default" id="table-1">
-<caption><span class="caption-number">Table 14 </span><span class="caption-text">Counts for 3 or more categories</span><a class="headerlink" href="#table-1" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-<col style="width: 16.7%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"></th>
-<th class="head"><p>Rater 2: <span class="math notranslate nohighlight">\(v_1\)</span></p></th>
-<th class="head"><p>Rater 2: <span class="math notranslate nohighlight">\(v_2\)</span></p></th>
-<th class="head"><p>Rater 2: <span class="math notranslate nohighlight">\(v_3\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></th>
-<th class="head"><p>Row Total</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Rater 1:</strong> <span class="math notranslate nohighlight">\(v_1\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{11}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{12}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{13}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{1\bullet}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Rater 1:</strong> <span class="math notranslate nohighlight">\(v_2\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{21}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{22}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{23}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{2\bullet}\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Rater 1:</strong> <span class="math notranslate nohighlight">\(v_3\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{31}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{32}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{33}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{3\bullet}\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ddots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Column Total</strong></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{\bullet 1}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{\bullet 2}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_{\bullet 3}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(n\)</span></p></td>
-</tr>
-</tbody>
-</table>
+See <a class="reference internal" href="#table-1">table-1</a>.</p>
 <p>The observed raw percentage of agreement is defined as <span class="math notranslate nohighlight">\(p_O = \sum_{j=1}^J N_{jj} / n\)</span>.
 The expected number of agreement is estimated by
 <span class="math notranslate nohighlight">\(\sum_{j=1}^J\hat{E}_{j} = \frac{1}{n}\sum_{j=1}^J N_{\bullet j} N_{j\bullet} \equiv n p_E\)</span>.
@@ -174,7 +117,7 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 </section>
 <section id="bias-prevalence-and-adjusted-kappas">
 <h2>Bias, Prevalence and Adjusted Kappas<a class="headerlink" href="#bias-prevalence-and-adjusted-kappas" title="Link to this heading"></a></h2>
-<p>All discussions in this section are based on Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993) <a class="footnote-reference brackets" href="#id6" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<p>All discussion in this section are based on Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993) <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id7" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <section id="bias-index-bi">
 <h3>Bias Index (BI)<a class="headerlink" href="#bias-index-bi" title="Link to this heading"></a></h3>
 <p>For two raters and two categories (<span class="math notranslate nohighlight">\(J=2\)</span>), Byrt et al. define Bias Index (BI) as difference of probability of one rating from two raters, which can be estimated as:</p>
@@ -198,9 +141,9 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[N_{2 \bullet}^{(BA)} = N_{\bullet 2}^{(BA)} = N_{22} + \frac{1}{2}(N_{12} + N_{21}).\]</div>
-<p>See <a href="#id11"><span class="problematic" id="id12">table-1_</span></a>.</p>
-<table class="docutils align-default" id="id5">
-<caption><span class="caption-number">Table 15 </span><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
+<p>See <a class="reference internal" href="#table-1">table-1</a>.</p>
+<table class="docutils align-default" id="table-1">
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#table-1" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -259,7 +202,7 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 \[N_{2 \bullet}^{(BAPA)} = N_{\bullet 2}^{(BAPA)} = \frac{n}{2}\]</div>
 <p>See illustration in <a class="reference internal" href="#table-2">table-2</a>.</p>
 <table class="docutils align-default" id="table-2">
-<caption><span class="caption-number">Table 16 </span><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#table-2" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#table-2" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -297,7 +240,7 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[p_O^{(BAPA)} = \frac{1}{n} \left( N_{11}^{(PA)} + N_{22}^{(PA)} \right) = \frac{1}{n} \left( N_{11} + N_{22} \right) = p_O.\]</div>
-<p>Therefore, the <span class="math notranslate nohighlight">\(kappa\)</span> value based on <a class="reference internal" href="#table-2">table-2</a> can be calculated as:</p>
+<p>Therefore, the <span class="math notranslate nohighlight">\(\kappa\)</span> value based on <a class="reference internal" href="#table-2">table-2</a> can be calculated as:</p>
 <div class="math notranslate nohighlight">
 \[\kappa^{(BAPA)} = \frac{p_O - 0.5}{1 - 0.5} = 2p_O - 1,\]</div>
 <p>which is a linear function of <span class="math notranslate nohighlight">\(p_O\)</span> with possible values between -1 and 1.</p>
@@ -306,16 +249,16 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 <section id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id6" role="doc-footnote">
+<aside class="footnote brackets" id="id5" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
 <p>Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993). Bias, prevalence and kappa. Journal of clinical epidemiology, 46(5), 423–429. <a class="reference external" href="https://doi.org/10.1016/0895-4356(93)90018-v">https://doi.org/10.1016/0895-4356(93)90018-v</a></p>
 </aside>
-<aside class="footnote brackets" id="id7" role="doc-footnote">
+<aside class="footnote brackets" id="id6" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
 <p>SAS. (year). The SURVEYFREQ Procedure: Kappa Coefficients. <a class="reference external" href="https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_surveyfreq_details57.htm">https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_surveyfreq_details57.htm</a></p>
 </aside>
-<aside class="footnote brackets" id="id8" role="doc-footnote">
+<aside class="footnote brackets" id="id7" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
 <p>SAS. (year). The FREQ Procedure: Tests and Measures of Agreement. <a class="reference external" href="https://documentation.sas.com/doc/en/statug/15.2/statug_freq_details78.htm">https://documentation.sas.com/doc/en/statug/15.2/statug_freq_details78.htm</a></p>
 </aside>
