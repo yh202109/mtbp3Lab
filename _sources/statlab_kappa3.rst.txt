@@ -42,13 +42,13 @@ Notation
 For two raters and two or more category ratings, let :math:`Y_{r,i} \in \{v_1,\ldots, v_J \}` represent the rating 
 from rater :math:`r \in \{1,2\}` for sample :math:`i \in \{ 1, \ldots, n \}`.
 Let :math:`N_{j_1,j_2}` represent the total number of samples that received ratings :math:`(v_{j_1}, v_{j_2})` from two raters, where :math:`j_1,j_2 \in \{1,\ldots,J\}`.
-See table-kappa3-1_.
+See :table:`table-kappa3-1`.
 
-.. _table-kappa3-1:
 
 .. list-table:: Counts for 3 or more categories
    :widths: 10 10 10 10 10 10
    :header-rows: 1
+   :name: table-kappa3-1:
 
    * - 
      - Rater 2: :math:`v_1`
