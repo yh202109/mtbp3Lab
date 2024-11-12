@@ -22,7 +22,9 @@
       <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Correlation/NP/Kendall’s Tau" href="statlab_corr_tau.html" />
+    <link rel="prev" title="Reliability/cate/Fleiss’s Kappa" href="statlab_kappa2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,9 +46,22 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="statlab_kappa.html">Reliability/cate/Cohen’s Kappa</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statlab_kappa2.html">Reliability/cate/Fleiss’s Kappa</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reliability/cate/Kappa Variations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notation">Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bias-prevalence-and-adjusted-kappas">Bias, Prevalence and Adjusted Kappas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bias-index-bi">Bias Index (BI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bias-adjusted-kappa-bak">Bias-adjusted Kappa (BAK)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prevalence-index-pi">Prevalence Index (PI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prevalence-adjusted-bias-adjusted-kappa-pabak">Prevalence-adjusted Bias-adjusted Kappa (PABAK)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="statlab_corr_tau.html">Correlation/NP/Kendall’s Tau</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statlab_corr_spearman_rho.html">Correlation/NP/Spearman’s Rho</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
@@ -95,7 +110,7 @@ from rater <span class="math notranslate nohighlight">\(r \in \{1,2\}\)</span> f
 Let <span class="math notranslate nohighlight">\(N_{j_1,j_2}\)</span> represent the total number of samples that received ratings <span class="math notranslate nohighlight">\((v_{j_1}, v_{j_2})\)</span> from two raters, where <span class="math notranslate nohighlight">\(j_1,j_2 \in \{1,\ldots,J\}\)</span>.
 See <a href="#id9"><span class="problematic" id="id10">table-1_</span></a>.</p>
 <table class="docutils align-default" id="table-1">
-<caption><span class="caption-text">Counts for 3 or more categories</span><a class="headerlink" href="#table-1" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Counts for 3 or more categories</span><a class="headerlink" href="#table-1" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 16.7%" />
 <col style="width: 16.7%" />
@@ -159,7 +174,7 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 </section>
 <section id="bias-prevalence-and-adjusted-kappas">
 <h2>Bias, Prevalence and Adjusted Kappas<a class="headerlink" href="#bias-prevalence-and-adjusted-kappas" title="Link to this heading"></a></h2>
-<p>All discussion in this section are based on Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993) <a class="footnote-reference brackets" href="#id6" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<p>All discussions in this section are based on Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993) <a class="footnote-reference brackets" href="#id6" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <section id="bias-index-bi">
 <h3>Bias Index (BI)<a class="headerlink" href="#bias-index-bi" title="Link to this heading"></a></h3>
 <p>For two raters and two categories (<span class="math notranslate nohighlight">\(J=2\)</span>), Byrt et al. define Bias Index (BI) as difference of probability of one rating from two raters, which can be estimated as:</p>
@@ -185,7 +200,7 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 \[N_{2 \bullet}^{(BA)} = N_{\bullet 2}^{(BA)} = N_{22} + \frac{1}{2}(N_{12} + N_{21}).\]</div>
 <p>See <a href="#id11"><span class="problematic" id="id12">table-1_</span></a>.</p>
 <table class="docutils align-default" id="id5">
-<caption><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -244,7 +259,7 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 \[N_{2 \bullet}^{(BAPA)} = N_{\bullet 2}^{(BAPA)} = \frac{n}{2}\]</div>
 <p>See illustration in <a class="reference internal" href="#table-2">table-2</a>.</p>
 <table class="docutils align-default" id="table-2">
-<caption><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#table-2" title="Link to this table"></a></caption>
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Counts for 2 categories</span><a class="headerlink" href="#table-2" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -311,7 +326,10 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="statlab_kappa2.html" class="btn btn-neutral float-left" title="Reliability/cate/Fleiss’s Kappa" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="statlab_corr_tau.html" class="btn btn-neutral float-right" title="Correlation/NP/Kendall’s Tau" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
