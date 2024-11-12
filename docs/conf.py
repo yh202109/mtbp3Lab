@@ -31,11 +31,6 @@ numfig = True
 math_numfig = True
 numfig_secnum_depth = 2
 math_eqref_format = "Eq. ({number})"
-numfig_format = {
-    'figure': 'Fig. %s',
-    'section': 'Section',
-    'table': 'Table %s',
-}
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
