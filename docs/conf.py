@@ -24,7 +24,7 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.doctest",
 ]
-autoapi_dirs = ["../mtbp3"]
+autoapi_dirs = ["../mtbp3Lab"]
 mathjax_path = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
 imgmath_image_format = 'svg'
 numfig = True
