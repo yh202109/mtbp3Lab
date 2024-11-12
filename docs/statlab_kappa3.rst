@@ -96,7 +96,7 @@ The SE of :math:`\kappa` is calculated as :math:`\sqrt{\frac{p_O(1-p_O)}{n(1-p_E
 Bias, Prevalence and Adjusted Kappas
 *************
 
-All discussion in this section are based on Byrt, T., Bishop, J., & Carlin, J. B. (1993) [1]_ [2]_ [3]_.
+All discussions in this section are based on Byrt, T., Bishop, J., & Carlin, J. B. (1993) [1]_ [2]_ [3]_.
 
 Bias Index (BI) 
 =============
