@@ -217,7 +217,7 @@ See illustration in :numref:`table-kappa3-3`.
      - :math:`\frac{n}{2}` 
      - :math:`n`
 
-Based on table-2_, we can find adjusted :math:`p_E^{(BAPA)}` and :math:`p_O^{(BAPA)}`:
+Based on :numref:`table-kappa3-3`, we can find adjusted :math:`p_E^{(BAPA)}` and :math:`p_O^{(BAPA)}`:
 
 .. math::
   p_E^{(BAPA)} = \frac{1}{n^2} \left( \frac{n}{2}\frac{n}{2} + \frac{n}{2}\frac{n}{2} \right) = \frac{1}{2},
@@ -228,7 +228,7 @@ and
   p_O^{(BAPA)} = \frac{1}{n} \left( N_{11}^{(PA)} + N_{22}^{(PA)} \right) = \frac{1}{n} \left( N_{11} + N_{22} \right) = p_O.
 
 
-Therefore, the :math:`\kappa` value based on table-2_ can be calculated as:
+Therefore, the :math:`\kappa` value based on :numref:`table-kappa3-3` can be calculated as:
 
 .. math::
   \kappa^{(BAPA)} = \frac{p_O - 0.5}{1 - 0.5} = 2p_O - 1,
