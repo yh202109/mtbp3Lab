@@ -52,7 +52,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Reliability/cate/Kappa Variations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notation">Notation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bias-prevalence-and-adjusted-kappas">Bias, Prevalence and Adjusted Kappas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bias-prevalence-and-adjusted-kappas-byrt-et-al-1993">Bias, Prevalence and Adjusted Kappas (Byrt et al., 1993)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#bias-index-bi">Bias Index (BI)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bias-adjusted-kappa-bak">Bias-adjusted Kappa (BAK)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prevalence-index-pi">Prevalence Index (PI)</a></li>
@@ -177,8 +177,8 @@ The expected number of agreement is estimated by
 The Cohen’s <span class="math notranslate nohighlight">\(\kappa\)</span> statistic is calculated as <span class="math notranslate nohighlight">\(\kappa = \frac{p_O - p_E}{1-p_E}\)</span>.
 The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calculated as <span class="math notranslate nohighlight">\(\sqrt{\frac{p_O(1-p_O)}{n(1-p_E)^2}}\)</span>.</p>
 </section>
-<section id="bias-prevalence-and-adjusted-kappas">
-<h2>Bias, Prevalence and Adjusted Kappas<a class="headerlink" href="#bias-prevalence-and-adjusted-kappas" title="Link to this heading"></a></h2>
+<section id="bias-prevalence-and-adjusted-kappas-byrt-et-al-1993">
+<h2>Bias, Prevalence and Adjusted Kappas (Byrt et al., 1993)<a class="headerlink" href="#bias-prevalence-and-adjusted-kappas-byrt-et-al-1993" title="Link to this heading"></a></h2>
 <p>All discussion in this section are based on Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993) <a class="footnote-reference brackets" href="#id8" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id9" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <section id="bias-index-bi">
 <h3>Bias Index (BI)<a class="headerlink" href="#bias-index-bi" title="Link to this heading"></a></h3>
@@ -347,9 +347,8 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 </tr>
 </tbody>
 </table>
-<p>From <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a>, we can see that <span class="math notranslate nohighlight">\(p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)\)</span> and
-<span class="math notranslate nohighlight">\(\kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}\)</span>
-<a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup>.</p>
+<p>From <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a>, we can see that <span class="math notranslate nohighlight">\(p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)\)</span> and <a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
+<p>From <code class="xref eq docutils literal notranslate"><span class="pre">eq_kappa3_2</span></code>, we can observe change of <span class="math notranslate nohighlight">\(\kappa\)</span> related to <span class="math notranslate nohighlight">\(\kappa^{(BAPA)}\)</span>.</p>
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>

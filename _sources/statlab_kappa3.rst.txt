@@ -94,7 +94,7 @@ The Cohen's :math:`\kappa` statistic is calculated as :math:`\kappa = \frac{p_O 
 The SE of :math:`\kappa` is calculated as :math:`\sqrt{\frac{p_O(1-p_O)}{n(1-p_E)^2}}`.
 
 *************
-Bias, Prevalence and Adjusted Kappas
+Bias, Prevalence and Adjusted Kappas (Byrt et al., 1993)
 *************
 
 All discussion in this section are based on Byrt, T., Bishop, J., & Carlin, J. B. (1993) [1]_ [2]_ [3]_.
@@ -268,9 +268,15 @@ From :eq:`eq_kappa3_1`, we can see that [1]_ :sup:`(Equation 1 and Appendix A)`
      - :math:`\frac{n}{2}(1 + \hat{BI} - \hat{PI})` 
      - :math:`n`
 
-From :numref:`table-kappa3-4`, we can see that :math:`p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)` and 
-:math:`\kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}` 
-[1]_ :sup:`(Equation 1 and Appendix A)`.
+From :numref:`table-kappa3-4`, we can see that :math:`p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)` and [1]_ :sup:`(Equation 1 and Appendix A)`
+
+.. math::
+  :label: eq_kappa3_2
+  \kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}.
+
+
+From :eq:`eq_kappa3_2`, we can observe change of :math:`\kappa` related to :math:`\kappa^{(BAPA)}`.
+
 
 
 Examples
