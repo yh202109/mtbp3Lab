@@ -277,7 +277,7 @@ From :numref:`table-kappa3-4`, we can see that :math:`p_E = \frac{1}{2}( 1 - \ha
   \kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}.
 
 
-From :eq:`eq_kappa3_2`, we can observe change of :math:`\kappa` related to :math:`\kappa^{(BAPA)}`.
+From :eq:`eq_kappa3_2`, we can observe change of :math:`\kappa` related to :math:`\kappa^{(BAPA)}`, :math:`\hat{BI}`, and :math:`\hat{PI}`.
 
 
 
@@ -291,7 +291,7 @@ Given a fixed :math:`p_O`, the :math:`\kappa` statistic can be calculated as :ma
 Byrt et al. (1993) [1]_ :sup:`(Table 1 and Table 2)` quoted an example from Feinstein and Cicchetti (1990), reproduced as :numref:`table_kappa3_ex1_1` and :numref:`table-kappa3_ex1_2`, showing that
 given the same values of :math:`p_O`, different values of :math:`p_E` can yield :math:`\kappa` "more than 2-fold higher in one instance than the other".
 
-.. _table_kappa3_ex1_1
+.. _table_kappa3_ex1_1:
 
 .. list-table:: :math:`p_O = 0.85` and Cohen's :math:`\kappa = 0.7`
    :widths: 10 10 10 10
@@ -314,7 +314,7 @@ given the same values of :math:`p_O`, different values of :math:`p_E` can yield 
      - 54
      - 100
 
-.. _table_kappa3_ex1_2
+.. _table_kappa3_ex1_2:
 
 .. list-table:: :math:`p_O = 0.85` and Cohen's :math:`\kappa = 0.32`
    :widths: 10 10 10 10
