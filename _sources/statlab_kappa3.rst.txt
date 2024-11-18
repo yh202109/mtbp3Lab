@@ -288,7 +288,7 @@ Example 1
 -------------
 
 Given a fixed :math:`p_O`, the :math:`\kappa` statistic can be calculated as :math:`\kappa = 1 + \frac{p_O - 1}{1-p_E}`, which is a decreasing function of :math:`p_E`.
-Byrt et al. (1993) [1]_ :sup:`(Table 1 and Table 2)` quoted an example from Feinstein and Cicchetti (1990), reproduced as :numref:`table_kappa3_ex1_1` and :numref:`table-kappa3_ex1_2`, showing that
+Byrt et al. (1993) [1]_ :sup:`(Table 1 and Table 2)` quoted an example from Feinstein and Cicchetti (1990), reproduced as :numref:`table_kappa3_ex1_1` and :numref:`table_kappa3_ex1_2`, showing that
 given the same values of :math:`p_O`, different values of :math:`p_E` can yield :math:`\kappa` "more than 2-fold higher in one instance than the other".
 
 .. _table_kappa3_ex1_1:
