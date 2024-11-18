@@ -113,6 +113,8 @@ For two raters and two categories (:math:`J=2`), Byrt et al. define Bias Index (
 - when two raters have the same frequencies of ratings, which means :math:`N_{1 \bullet} = N_{\bullet 1}`, and  :math:`N_{11}+N_{12} = N_{11}+N_{21}`, then :math:`\hat{BI} = 0`; 
 - when :math:`N_{12} = n` or :math:`N_{21}=n`, :math:`|\hat{BI}|=1`.
 
+Note that the sign of :math:`\hat{BI}` depends on which rater (:math:`j=1` or :math:`j=2`) is assigned as "rater A".
+Within this page, rater :math:`j=2` is corresponding to the rater labeled "A" in Byrt et al. (1993) to have similar table structures.
 
 Bias-adjusted Kappa (BAK) 
 =============
@@ -136,7 +138,7 @@ See :numref:`table-kappa3-2`.
 
 .. _table-kappa3-2:
 
-.. list-table:: Counts for 2 categories
+.. list-table:: Adjusted counts for 2 categories adjusted - using BA
    :widths: 10 10 10 10
    :header-rows: 1
 
@@ -171,7 +173,6 @@ For two raters and two categories (:math:`J=2`), Byrt et al. defined Prevalence 
 - when :math:`N_{11} = n`, :math:`\hat{PI}=1`
 - when :math:`N_{22} = n`, :math:`\hat{PI}=-1`
 
-
 Prevalence-adjusted Bias-adjusted Kappa (PABAK)
 =============
 
@@ -196,7 +197,7 @@ See illustration in :numref:`table-kappa3-3`.
 
 .. _table-kappa3-3:
 
-.. list-table:: Counts for 2 categories
+.. list-table:: Adjusted counts for 2 categories adjusted - using both BA and PA
    :widths: 10 10 10 10
    :header-rows: 1
 
@@ -231,9 +232,103 @@ and
 Therefore, the :math:`\kappa` value based on :numref:`table-kappa3-3` can be calculated as:
 
 .. math::
+  :label: eq_kappa3_1
   \kappa^{(BAPA)} = \frac{p_O - 0.5}{1 - 0.5} = 2p_O - 1,
 
 which is a linear function of :math:`p_O` with possible values between -1 and 1.
+
+Observed :math:`\kappa` as a function of PABAK, :math:`\hat{BI}`, and :math:`\hat{PI}`
+=============
+
+From :eq:`eq_kappa3_1`, we can see that [1]_ :sup:`(Equation 1 and Appendix A)` 
+
+- :math:`p_O = \frac{1}{2}(\kappa^{(BAPA)} + 1)`
+- combining :math:`p_O = \frac{1}{n}(N_{11}+N_{22})` and :math:`1-p_O = \frac{1}{n}(N_{12}+N_{21})`, the observed counts can be expressed as :numref:`table-kappa3-4` below
+
+.. _table-kappa3-4:
+
+.. list-table:: Observed counts for 2 categories - expressed using :math:`p_O`, :math:`BI` and :math:`PI`
+   :widths: 10 10 10 10
+   :header-rows: 1
+
+   * - 
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
+     - Row Total
+   * - **Rater 1:** :math:`v_1`
+     - :math:`\frac{n}{2}(p_O + \hat{PI})`
+     - :math:`\frac{n}{2}(1 - p_O + \hat{BI})` 
+     - :math:`\frac{n}{2}(1 + \hat{BI} + \hat{PI})` 
+   * - **Rater 1:**  :math:`v_2`
+     - :math:`\frac{n}{2}(1 - p_O - \hat{BI})`
+     - :math:`\frac{n}{2}(p_O - \hat{PI})` 
+     - :math:`\frac{n}{2}(1-\hat{BI}-\hat{PI})` 
+   * - **Column Total**
+     - :math:` \frac{n}{2}(1 - \hat{BI} + \hat{PI})`
+     - :math:`\frac{n}{2}(1 + \hat{BI} - \hat{PI})` 
+     - :math:`n`
+
+From :numref:`table-kappa3-4`, we can see that :math:`p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)` and 
+:math:`\kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}` 
+[1]_ :sup:`(Equation 1 and Appendix A)`.
+
+
+Examples
+=============
+
+Example 1 
+-------------
+
+Given a fixed :math:`p_O`, the :math:`\kappa` statistic can be calculated as :math:`\kappa = 1 + \frac{p_O - 1}{1-p_E}`, which is a decreasing function of :math:`p_E`.
+Byrt et al. (1993) [1]_ :sup:`(Table 1 and Table 2)` quoted an example from Feinstein and Cicchetti (1990), reproduced as :numref:`table_kappa3_ex1_1` and :numref:`table-kappa3_ex1_2`, showing that
+given the same values of :math:`p_O`, different values of :math:`p_E` can yield :math:`\kappa` "more than 2-fold higher in one instance than the other".
+
+.. _table_kappa3_ex1_1
+
+.. list-table:: :math:`p_O = 0.85` and Cohen's :math:`\kappa = 0.7`
+   :widths: 10 10 10 10
+   :header-rows: 1
+
+   * - 
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
+     - Row Total
+   * - **Rater 1:** :math:`v_1`
+     - 40
+     - 9
+     - 49
+   * - **Rater 1:** :math:`v_2`
+     - 6
+     - 45
+     - 51
+   * - **Column Total**
+     - 46
+     - 54
+     - 100
+
+.. _table_kappa3_ex1_2
+
+.. list-table:: :math:`p_O = 0.85` and Cohen's :math:`\kappa = 0.32`
+   :widths: 10 10 10 10
+   :header-rows: 1
+
+   * - 
+     - Rater 2: :math:`v_1`
+     - Rater 2: :math:`v_2`
+     - Row Total
+   * - **Rater 1:** :math:`v_1`
+     - 80
+     - 10
+     - 90
+   * - **Rater 1:** :math:`v_2`
+     - 5
+     - 5
+     - 10
+   * - **Column Total**
+     - 85
+     - 15
+     - 100
+
 
 *************
 Reference
@@ -242,3 +337,4 @@ Reference
 .. [1] Byrt, T., Bishop, J., & Carlin, J. B. (1993). Bias, prevalence and kappa. Journal of clinical epidemiology, 46(5), 423–429. https://doi.org/10.1016/0895-4356(93)90018-v
 .. [2] SAS. (year). The SURVEYFREQ Procedure: Kappa Coefficients. https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_surveyfreq_details57.htm
 .. [3] SAS. (year). The FREQ Procedure: Tests and Measures of Agreement. https://documentation.sas.com/doc/en/statug/15.2/statug_freq_details78.htm
+.. [4] Feinstein, A. R., & Cicchetti, D. V. (1990). High agreement but low kappa: I. The problems of two paradoxes. Journal of clinical epidemiology, 43(6), 543–549. https://doi.org/10.1016/0895-4356(90)90158-l
