@@ -233,6 +233,7 @@ Therefore, the :math:`\kappa` value based on :numref:`table-kappa3-3` can be cal
 
 .. math::
   :label: eq_kappa3_1
+
   \kappa^{(BAPA)} = \frac{p_O - 0.5}{1 - 0.5} = 2p_O - 1,
 
 which is a linear function of :math:`p_O` with possible values between -1 and 1.
@@ -264,7 +265,7 @@ From :eq:`eq_kappa3_1`, we can see that [1]_ :sup:`(Equation 1 and Appendix A)`
      - :math:`\frac{n}{2}(p_O - \hat{PI})` 
      - :math:`\frac{n}{2}(1-\hat{BI}-\hat{PI})` 
    * - **Column Total**
-     - :math:` \frac{n}{2}(1 - \hat{BI} + \hat{PI})`
+     - :math:`\frac{n}{2}(1 - \hat{BI} + \hat{PI})`
      - :math:`\frac{n}{2}(1 + \hat{BI} - \hat{PI})` 
      - :math:`n`
 
@@ -272,6 +273,7 @@ From :numref:`table-kappa3-4`, we can see that :math:`p_E = \frac{1}{2}( 1 - \ha
 
 .. math::
   :label: eq_kappa3_2
+
   \kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}.
 
 

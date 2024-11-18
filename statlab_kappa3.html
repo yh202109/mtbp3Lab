@@ -305,11 +305,13 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 <div class="math notranslate nohighlight">
 \[p_O^{(BAPA)} = \frac{1}{n} \left( N_{11}^{(PA)} + N_{22}^{(PA)} \right) = \frac{1}{n} \left( N_{11} + N_{22} \right) = p_O.\]</div>
 <p>Therefore, the <span class="math notranslate nohighlight">\(\kappa\)</span> value based on <a class="reference internal" href="#table-kappa3-3"><span class="std std-numref">Table 16</span></a> can be calculated as:</p>
+<div class="math notranslate nohighlight" id="equation-eq-kappa3-1">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-kappa3-1" title="Link to this equation"></a></span>\[\kappa^{(BAPA)} = \frac{p_O - 0.5}{1 - 0.5} = 2p_O - 1,\]</div>
 <p>which is a linear function of <span class="math notranslate nohighlight">\(p_O\)</span> with possible values between -1 and 1.</p>
 </section>
 <section id="observed-kappa-as-a-function-of-pabak-hat-bi-and-hat-pi">
 <h3>Observed <span class="math notranslate nohighlight">\(\kappa\)</span> as a function of PABAK, <span class="math notranslate nohighlight">\(\hat{BI}\)</span>, and <span class="math notranslate nohighlight">\(\hat{PI}\)</span><a class="headerlink" href="#observed-kappa-as-a-function-of-pabak-hat-bi-and-hat-pi" title="Link to this heading"></a></h3>
-<p>From <code class="xref eq docutils literal notranslate"><span class="pre">eq_kappa3_1</span></code>, we can see that <a class="footnote-reference brackets" href="#id8" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
+<p>From <a class="reference internal" href="#equation-eq-kappa3-1">Eq. (10)</a>, we can see that <a class="footnote-reference brackets" href="#id8" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(p_O = \frac{1}{2}(\kappa^{(BAPA)} + 1)\)</span></p></li>
 <li><p>combining <span class="math notranslate nohighlight">\(p_O = \frac{1}{n}(N_{11}+N_{22})\)</span> and <span class="math notranslate nohighlight">\(1-p_O = \frac{1}{n}(N_{12}+N_{21})\)</span>, the observed counts can be expressed as <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a> below</p></li>
@@ -341,14 +343,16 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 <td><p><span class="math notranslate nohighlight">\(\frac{n}{2}(1-\hat{BI}-\hat{PI})\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Column Total</strong></p></td>
-<td><p>:math:` frac{n}{2}(1 - hat{BI} + hat{PI})`</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{n}{2}(1 - \hat{BI} + \hat{PI})\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{n}{2}(1 + \hat{BI} - \hat{PI})\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(n\)</span></p></td>
 </tr>
 </tbody>
 </table>
 <p>From <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a>, we can see that <span class="math notranslate nohighlight">\(p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)\)</span> and <a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
-<p>From <code class="xref eq docutils literal notranslate"><span class="pre">eq_kappa3_2</span></code>, we can observe change of <span class="math notranslate nohighlight">\(\kappa\)</span> related to <span class="math notranslate nohighlight">\(\kappa^{(BAPA)}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-eq-kappa3-2">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-kappa3-2" title="Link to this equation"></a></span>\[\kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}.\]</div>
+<p>From <a class="reference internal" href="#equation-eq-kappa3-2">Eq. (11)</a>, we can observe change of <span class="math notranslate nohighlight">\(\kappa\)</span> related to <span class="math notranslate nohighlight">\(\kappa^{(BAPA)}\)</span>.</p>
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
