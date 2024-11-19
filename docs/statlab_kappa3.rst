@@ -284,7 +284,7 @@ Extend PABAK to More Than 2 Categories
 
 Bryt et al. (1993) [1]_ discuss :math:`PABAK` in details for ratings in 2 categories, 
 and mentioned the equivalence of :math:`PABAK` to Bennett's :math:`S`, 
-which can be calculated for more than 2 categories (:math:`J \geq 2`) [2]_ [3]_.
+which can be calculated for more than 2 categories (:math:`J \geq 2`) and that yields variance used by SAS [2]_ [3]_.
 
 
 Discussion from the Original Paper
