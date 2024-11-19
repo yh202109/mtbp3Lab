@@ -58,6 +58,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#prevalence-index-pi">Prevalence Index (PI)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prevalence-adjusted-bias-adjusted-kappa-pabak">Prevalence-adjusted Bias-adjusted Kappa (PABAK)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#observed-kappa-as-a-function-of-pabak-hat-bi-and-hat-pi">Observed <span class="math notranslate nohighlight">\(\kappa\)</span> as a function of PABAK, <span class="math notranslate nohighlight">\(\hat{BI}\)</span>, and <span class="math notranslate nohighlight">\(\hat{PI}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extend-pabak-to-more-than-2-categories">Extend PABAK to More Than 2 Categories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discussion-from-the-original-paper">Discussion from the Original Paper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#example-1">Example 1</a></li>
 </ul>
@@ -105,7 +107,7 @@
 <span class="red">This page is provided only for studying and practicing. The author does not intend to promote or advocate any particular analysis method or software.</span></p>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Link to this heading"></a></h2>
-<p>Cohen’s kappa (<span class="math notranslate nohighlight">\(\kappa\)</span>) is a statistic used for describing inter-rater reliability of two raters (or intra-rater) with categorical rating outcomes <a class="footnote-reference brackets" href="#id8" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+<p>Cohen’s kappa (<span class="math notranslate nohighlight">\(\kappa\)</span>) is a statistic used for describing inter-rater reliability of two raters (or intra-rater) with categorical rating outcomes <a class="footnote-reference brackets" href="#id10" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
 This page discusses some variations.</p>
 </section>
 <section id="notation">
@@ -114,8 +116,8 @@ This page discusses some variations.</p>
 from rater <span class="math notranslate nohighlight">\(r \in \{1,2\}\)</span> for sample <span class="math notranslate nohighlight">\(i \in \{ 1, \ldots, n \}\)</span>.
 Let <span class="math notranslate nohighlight">\(N_{j_1,j_2}\)</span> represent the total number of samples that received ratings <span class="math notranslate nohighlight">\((v_{j_1}, v_{j_2})\)</span> from two raters, where <span class="math notranslate nohighlight">\(j_1,j_2 \in \{1,\ldots,J\}\)</span>.
 See <a class="reference internal" href="#table-kappa3-1"><span class="std std-numref">Table 14</span></a>.</p>
-<span id="table-kappa3-1"></span><table class="docutils align-default" id="id12">
-<caption><span class="caption-number">Table 14 </span><span class="caption-text">Counts for 3 or more categories</span><a class="headerlink" href="#id12" title="Link to this table"></a></caption>
+<span id="table-kappa3-1"></span><table class="docutils align-default" id="id14">
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Counts for 3 or more categories</span><a class="headerlink" href="#id14" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 16.7%" />
 <col style="width: 16.7%" />
@@ -179,7 +181,7 @@ The SE of <span class="math notranslate nohighlight">\(\kappa\)</span> is calcul
 </section>
 <section id="bias-prevalence-and-adjusted-kappas-byrt-et-al-1993">
 <h2>Bias, Prevalence and Adjusted Kappas (Byrt et al., 1993)<a class="headerlink" href="#bias-prevalence-and-adjusted-kappas-byrt-et-al-1993" title="Link to this heading"></a></h2>
-<p>All discussion in this section are based on Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993) <a class="footnote-reference brackets" href="#id8" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id9" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<p>All discussion in this section are based on Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993) <a class="footnote-reference brackets" href="#id10" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id11" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id12" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <section id="bias-index-bi">
 <h3>Bias Index (BI)<a class="headerlink" href="#bias-index-bi" title="Link to this heading"></a></h3>
 <p>For two raters and two categories (<span class="math notranslate nohighlight">\(J=2\)</span>), Byrt et al. define Bias Index (BI) as difference of probability of one rating from two raters, which can be estimated as:</p>
@@ -206,8 +208,8 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 <div class="math notranslate nohighlight">
 \[N_{2 \bullet}^{(BA)} = N_{\bullet 2}^{(BA)} = N_{22} + \frac{1}{2}(N_{12} + N_{21}).\]</div>
 <p>See <a class="reference internal" href="#table-kappa3-2"><span class="std std-numref">Table 15</span></a>.</p>
-<span id="table-kappa3-2"></span><table class="docutils align-default" id="id13">
-<caption><span class="caption-number">Table 15 </span><span class="caption-text">Adjusted counts for 2 categories adjusted - using BA</span><a class="headerlink" href="#id13" title="Link to this table"></a></caption>
+<span id="table-kappa3-2"></span><table class="docutils align-default" id="id15">
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Adjusted counts for 2 categories adjusted - using BA</span><a class="headerlink" href="#id15" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -265,8 +267,8 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 <div class="math notranslate nohighlight">
 \[N_{2 \bullet}^{(BAPA)} = N_{\bullet 2}^{(BAPA)} = \frac{n}{2}\]</div>
 <p>See illustration in <a class="reference internal" href="#table-kappa3-3"><span class="std std-numref">Table 16</span></a>.</p>
-<span id="table-kappa3-3"></span><table class="docutils align-default" id="id14">
-<caption><span class="caption-number">Table 16 </span><span class="caption-text">Adjusted counts for 2 categories adjusted - using both BA and PA</span><a class="headerlink" href="#id14" title="Link to this table"></a></caption>
+<span id="table-kappa3-3"></span><table class="docutils align-default" id="id16">
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">Adjusted counts for 2 categories adjusted - using both BA and PA</span><a class="headerlink" href="#id16" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -311,13 +313,13 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 </section>
 <section id="observed-kappa-as-a-function-of-pabak-hat-bi-and-hat-pi">
 <h3>Observed <span class="math notranslate nohighlight">\(\kappa\)</span> as a function of PABAK, <span class="math notranslate nohighlight">\(\hat{BI}\)</span>, and <span class="math notranslate nohighlight">\(\hat{PI}\)</span><a class="headerlink" href="#observed-kappa-as-a-function-of-pabak-hat-bi-and-hat-pi" title="Link to this heading"></a></h3>
-<p>From <a class="reference internal" href="#equation-eq-kappa3-1">Eq. (10)</a>, we can see that <a class="footnote-reference brackets" href="#id8" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
+<p>From <a class="reference internal" href="#equation-eq-kappa3-1">Eq. (10)</a>, we can see that <a class="footnote-reference brackets" href="#id10" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(p_O = \frac{1}{2}(\kappa^{(BAPA)} + 1)\)</span></p></li>
 <li><p>combining <span class="math notranslate nohighlight">\(p_O = \frac{1}{n}(N_{11}+N_{22})\)</span> and <span class="math notranslate nohighlight">\(1-p_O = \frac{1}{n}(N_{12}+N_{21})\)</span>, the observed counts can be expressed as <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a> below</p></li>
 </ul>
-<span id="table-kappa3-4"></span><table class="docutils align-default" id="id15">
-<caption><span class="caption-number">Table 17 </span><span class="caption-text">Observed counts for 2 categories - expressed using <span class="math notranslate nohighlight">\(p_O\)</span>, <span class="math notranslate nohighlight">\(BI\)</span> and <span class="math notranslate nohighlight">\(PI\)</span></span><a class="headerlink" href="#id15" title="Link to this table"></a></caption>
+<span id="table-kappa3-4"></span><table class="docutils align-default" id="id17">
+<caption><span class="caption-number">Table 17 </span><span class="caption-text">Observed counts for 2 categories - expressed using <span class="math notranslate nohighlight">\(p_O\)</span>, <span class="math notranslate nohighlight">\(BI\)</span> and <span class="math notranslate nohighlight">\(PI\)</span></span><a class="headerlink" href="#id17" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -349,20 +351,35 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 </tr>
 </tbody>
 </table>
-<p>From <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a>, we can see that <span class="math notranslate nohighlight">\(p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)\)</span> and <a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
+<p>From <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a>, we can see that <span class="math notranslate nohighlight">\(p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)\)</span> and <a class="footnote-reference brackets" href="#id10" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
 <div class="math notranslate nohighlight" id="equation-eq-kappa3-2">
 <span class="eqno">(11)<a class="headerlink" href="#equation-eq-kappa3-2" title="Link to this equation"></a></span>\[\kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}.\]</div>
 <p>From <a class="reference internal" href="#equation-eq-kappa3-2">Eq. (11)</a>, we can observe change of <span class="math notranslate nohighlight">\(\kappa\)</span> related to <span class="math notranslate nohighlight">\(\kappa^{(BAPA)}\)</span>, <span class="math notranslate nohighlight">\(\hat{BI}\)</span>, and <span class="math notranslate nohighlight">\(\hat{PI}\)</span>.</p>
+</section>
+<section id="extend-pabak-to-more-than-2-categories">
+<h3>Extend PABAK to More Than 2 Categories<a class="headerlink" href="#extend-pabak-to-more-than-2-categories" title="Link to this heading"></a></h3>
+<p>Bryt et al. (1993) <a class="footnote-reference brackets" href="#id10" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> discuss <span class="math notranslate nohighlight">\(PABAK\)</span> in details for ratings in 2 categories,
+and mentioned the equivalence of <span class="math notranslate nohighlight">\(PABAK\)</span> to Bennett’s <span class="math notranslate nohighlight">\(S\)</span>,
+which can be calculated for more than 2 categories (<span class="math notranslate nohighlight">\(J \geq 2\)</span>).</p>
+</section>
+<section id="discussion-from-the-original-paper">
+<h3>Discussion from the Original Paper<a class="headerlink" href="#discussion-from-the-original-paper" title="Link to this heading"></a></h3>
+<p>The first paragraph in the Discussion section of Bryt et al. (1993) <a class="footnote-reference brackets" href="#id10" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> mentioned:</p>
+<blockquote>
+<div><p>“We have shown that for a <span class="math notranslate nohighlight">\(2 \prod 2\)</span> table of agreement kappa can be simply expressed in terms of three easily interpreted indices.
+…
+The reexpression of kappa enables a clear explanation of the conceptually distinct and independent components that arise in the investigation of agreement.”</p>
+</div></blockquote>
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
 <section id="example-1">
 <h4>Example 1<a class="headerlink" href="#example-1" title="Link to this heading"></a></h4>
 <p>Given a fixed <span class="math notranslate nohighlight">\(p_O\)</span>, the <span class="math notranslate nohighlight">\(\kappa\)</span> statistic can be calculated as <span class="math notranslate nohighlight">\(\kappa = 1 + \frac{p_O - 1}{1-p_E}\)</span>, which is a decreasing function of <span class="math notranslate nohighlight">\(p_E\)</span>.
-Byrt et al. (1993) <a class="footnote-reference brackets" href="#id8" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Table 1 and Table 2)</sup> quoted an example from Feinstein and Cicchetti (1990), reproduced as <a class="reference internal" href="#table-kappa3-ex1-1"><span class="std std-numref">Table 18</span></a> and <a class="reference internal" href="#table-kappa3-ex1-2"><span class="std std-numref">Table 19</span></a>, showing that
+Byrt et al. (1993) <a class="footnote-reference brackets" href="#id10" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Table 1 and Table 2)</sup> quoted an example from Feinstein and Cicchetti (1990), reproduced as <a class="reference internal" href="#table-kappa3-ex1-1"><span class="std std-numref">Table 18</span></a> and <a class="reference internal" href="#table-kappa3-ex1-2"><span class="std std-numref">Table 19</span></a>, showing that
 given the same values of <span class="math notranslate nohighlight">\(p_O\)</span>, different values of <span class="math notranslate nohighlight">\(p_E\)</span> can yield <span class="math notranslate nohighlight">\(\kappa\)</span> “more than 2-fold higher in one instance than the other”.</p>
-<span id="table-kappa3-ex1-1"></span><table class="docutils align-default" id="id16">
-<caption><span class="caption-number">Table 18 </span><span class="caption-text"><span class="math notranslate nohighlight">\(p_O = 0.85\)</span> and Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0.7\)</span></span><a class="headerlink" href="#id16" title="Link to this table"></a></caption>
+<span id="table-kappa3-ex1-1"></span><table class="docutils align-default" id="id18">
+<caption><span class="caption-number">Table 18 </span><span class="caption-text"><span class="math notranslate nohighlight">\(p_O = 0.85\)</span> and Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0.7\)</span></span><a class="headerlink" href="#id18" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -394,8 +411,8 @@ given the same values of <span class="math notranslate nohighlight">\(p_O\)</spa
 </tr>
 </tbody>
 </table>
-<span id="table-kappa3-ex1-2"></span><table class="docutils align-default" id="id17">
-<caption><span class="caption-number">Table 19 </span><span class="caption-text"><span class="math notranslate nohighlight">\(p_O = 0.85\)</span> and Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0.32\)</span></span><a class="headerlink" href="#id17" title="Link to this table"></a></caption>
+<span id="table-kappa3-ex1-2"></span><table class="docutils align-default" id="id19">
+<caption><span class="caption-number">Table 19 </span><span class="caption-text"><span class="math notranslate nohighlight">\(p_O = 0.85\)</span> and Cohen’s <span class="math notranslate nohighlight">\(\kappa = 0.32\)</span></span><a class="headerlink" href="#id19" title="Link to this table"></a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -433,20 +450,20 @@ given the same values of <span class="math notranslate nohighlight">\(p_O\)</spa
 <section id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id8" role="doc-footnote">
+<aside class="footnote brackets" id="id10" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id5">3</a>,<a role="doc-backlink" href="#id6">4</a>,<a role="doc-backlink" href="#id7">5</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id5">3</a>,<a role="doc-backlink" href="#id6">4</a>,<a role="doc-backlink" href="#id7">5</a>,<a role="doc-backlink" href="#id8">6</a>,<a role="doc-backlink" href="#id9">7</a>)</span>
 <p>Byrt, T., Bishop, J., &amp; Carlin, J. B. (1993). Bias, prevalence and kappa. Journal of clinical epidemiology, 46(5), 423–429. <a class="reference external" href="https://doi.org/10.1016/0895-4356(93)90018-v">https://doi.org/10.1016/0895-4356(93)90018-v</a></p>
 </aside>
-<aside class="footnote brackets" id="id9" role="doc-footnote">
+<aside class="footnote brackets" id="id11" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
 <p>SAS. (year). The SURVEYFREQ Procedure: Kappa Coefficients. <a class="reference external" href="https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_surveyfreq_details57.htm">https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_surveyfreq_details57.htm</a></p>
 </aside>
-<aside class="footnote brackets" id="id10" role="doc-footnote">
+<aside class="footnote brackets" id="id12" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
 <p>SAS. (year). The FREQ Procedure: Tests and Measures of Agreement. <a class="reference external" href="https://documentation.sas.com/doc/en/statug/15.2/statug_freq_details78.htm">https://documentation.sas.com/doc/en/statug/15.2/statug_freq_details78.htm</a></p>
 </aside>
-<aside class="footnote brackets" id="id11" role="doc-footnote">
+<aside class="footnote brackets" id="id13" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
 <p>Feinstein, A. R., &amp; Cicchetti, D. V. (1990). High agreement but low kappa: I. The problems of two paradoxes. Journal of clinical epidemiology, 43(6), 543–549. <a class="reference external" href="https://doi.org/10.1016/0895-4356(90)90158-l">https://doi.org/10.1016/0895-4356(90)90158-l</a></p>
 </aside>
