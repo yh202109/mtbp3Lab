@@ -279,6 +279,22 @@ From :numref:`table-kappa3-4`, we can see that :math:`p_E = \frac{1}{2}( 1 - \ha
 
 From :eq:`eq_kappa3_2`, we can observe change of :math:`\kappa` related to :math:`\kappa^{(BAPA)}`, :math:`\hat{BI}`, and :math:`\hat{PI}`.
 
+Extend PABAK to More Than 2 Categories
+=============
+
+Bryt et al. (1993) [1]_ discuss :math:`PABAK` in details for ratings in 2 categories, 
+and mentioned the equivalence of :math:`PABAK` to Bennett's :math:`S`, 
+which can be calculated for more than 2 categories (:math:`J \geq 2`).
+
+
+Discussion from the Original Paper
+=============
+
+The first paragraph in the Discussion section of Bryt et al. (1993) [1]_ mentioned:
+
+  "We have shown that for a :math:`2 \prod 2` table of agreement kappa can be simply expressed in terms of three easily interpreted indices.
+  ...
+  The reexpression of kappa enables a clear explanation of the conceptually distinct and independent components that arise in the investigation of agreement."
 
 
 Examples
