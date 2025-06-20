@@ -221,11 +221,15 @@ See illustration in :numref:`table-kappa3-3`.
 Based on :numref:`table-kappa3-3`, we can find adjusted :math:`p_E^{(BAPA)}` and :math:`p_O^{(BAPA)}`:
 
 .. math::
+  :label: eq_kappa3_pe
+
   p_E^{(BAPA)} = \frac{1}{n^2} \left( \frac{n}{2}\frac{n}{2} + \frac{n}{2}\frac{n}{2} \right) = \frac{1}{2},
 
 and 
 
 .. math::
+  :label: eq_kappa3_po
+
   p_O^{(BAPA)} = \frac{1}{n} \left( N_{11}^{(PA)} + N_{22}^{(PA)} \right) = \frac{1}{n} \left( N_{11} + N_{22} \right) = p_O.
 
 
@@ -285,6 +289,35 @@ Extend PABAK to More Than 2 Categories
 Bryt et al. (1993) [1]_ discuss :math:`PABAK` in details for ratings in 2 categories, 
 and mentioned the equivalence of :math:`PABAK` to Bennett's :math:`S`, 
 which can be calculated for more than 2 categories (:math:`J \geq 2`) and that yields variance used by SAS [2]_ [3]_.
+
+For :math:`J \gt 2`, :eq:`eq_kappa3_pe` and :eq:`eq_kappa3_po` become
+
+.. math::
+  :label: eq_kappa3_pe2
+
+  p_E^{(BAPA)} = \frac{1}{n^2} \left( \sum_{j=1}^J \frac{n}{J}\frac{n}{J} \right) = \frac{1}{J},
+
+and 
+
+.. math::
+  :label: eq_kappa3_po2
+
+  p_O^{(BAPA)} = \frac{1}{n} \left( \sum_{j=1}^J N_{jj}^{(PA)} \right) = \frac{1}{n} \left( \sum_{j=1}^J N_{jj} \right) = p_O.
+
+
+Combining :eq:`eq_kappa3_pe2` and :eq:`eq_kappa3_po2`, We can see that :eq:`eq_kappa3_1` becomes 
+
+.. math::
+  :label: eq_kappa3_3
+
+  \kappa^{(BAPA)} = \frac{p_O - \frac{1}{J}}{1 - \frac{1}{J}},
+
+which is a linear function of :math:`p_O` and a fixed value :math:`J`. The variance of :math:`\kappa^{(BAPA)` in :eq:`eq_kappa3_3` can be expressed as 
+
+.. math::
+  :label: eq_kappa3_3var
+
+  var\left(\kappa^{(BAPA)}\right) = \left(\frac{1}{1 - \frac{1}{J}}\right)^2\left(\frac{p_o(1-p_o)}{n}\right)
 
 
 Discussion from the Original Paper
@@ -352,7 +385,6 @@ given the same values of :math:`p_O`, different values of :math:`p_E` can yield 
      - 85
      - 15
      - 100
-
 
 *************
 Reference
