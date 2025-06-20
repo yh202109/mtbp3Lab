@@ -7,7 +7,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u"mtbp3Lab"
-copyright = u"2024, Y. Hsu"
+copyright = u"2024-2025, Y. Hsu"
 author = u"Y. Hsu"
 
 # -- General configuration ---------------------------------------------------
