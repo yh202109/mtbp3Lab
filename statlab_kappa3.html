@@ -301,19 +301,19 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 </tbody>
 </table>
 <p>Based on <a class="reference internal" href="#table-kappa3-3"><span class="std std-numref">Table 16</span></a>, we can find adjusted <span class="math notranslate nohighlight">\(p_E^{(BAPA)}\)</span> and <span class="math notranslate nohighlight">\(p_O^{(BAPA)}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[p_E^{(BAPA)} = \frac{1}{n^2} \left( \frac{n}{2}\frac{n}{2} + \frac{n}{2}\frac{n}{2} \right) = \frac{1}{2},\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-kappa3-pe">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-kappa3-pe" title="Link to this equation"></a></span>\[p_E^{(BAPA)} = \frac{1}{n^2} \left( \frac{n}{2}\frac{n}{2} + \frac{n}{2}\frac{n}{2} \right) = \frac{1}{2},\]</div>
 <p>and</p>
-<div class="math notranslate nohighlight">
-\[p_O^{(BAPA)} = \frac{1}{n} \left( N_{11}^{(PA)} + N_{22}^{(PA)} \right) = \frac{1}{n} \left( N_{11} + N_{22} \right) = p_O.\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-kappa3-po">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-kappa3-po" title="Link to this equation"></a></span>\[p_O^{(BAPA)} = \frac{1}{n} \left( N_{11}^{(PA)} + N_{22}^{(PA)} \right) = \frac{1}{n} \left( N_{11} + N_{22} \right) = p_O.\]</div>
 <p>Therefore, the <span class="math notranslate nohighlight">\(\kappa\)</span> value based on <a class="reference internal" href="#table-kappa3-3"><span class="std std-numref">Table 16</span></a> can be calculated as:</p>
 <div class="math notranslate nohighlight" id="equation-eq-kappa3-1">
-<span class="eqno">(10)<a class="headerlink" href="#equation-eq-kappa3-1" title="Link to this equation"></a></span>\[\kappa^{(BAPA)} = \frac{p_O - 0.5}{1 - 0.5} = 2p_O - 1,\]</div>
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-kappa3-1" title="Link to this equation"></a></span>\[\kappa^{(BAPA)} = \frac{p_O - 0.5}{1 - 0.5} = 2p_O - 1,\]</div>
 <p>which is a linear function of <span class="math notranslate nohighlight">\(p_O\)</span> with possible values between -1 and 1.</p>
 </section>
 <section id="observed-kappa-as-a-function-of-pabak-hat-bi-and-hat-pi">
 <h3>Observed <span class="math notranslate nohighlight">\(\kappa\)</span> as a function of PABAK, <span class="math notranslate nohighlight">\(\hat{BI}\)</span>, and <span class="math notranslate nohighlight">\(\hat{PI}\)</span><a class="headerlink" href="#observed-kappa-as-a-function-of-pabak-hat-bi-and-hat-pi" title="Link to this heading"></a></h3>
-<p>From <a class="reference internal" href="#equation-eq-kappa3-1">Eq. (10)</a>, we can see that <a class="footnote-reference brackets" href="#id10" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
+<p>From <a class="reference internal" href="#equation-eq-kappa3-1">Eq. (12)</a>, we can see that <a class="footnote-reference brackets" href="#id10" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(p_O = \frac{1}{2}(\kappa^{(BAPA)} + 1)\)</span></p></li>
 <li><p>combining <span class="math notranslate nohighlight">\(p_O = \frac{1}{n}(N_{11}+N_{22})\)</span> and <span class="math notranslate nohighlight">\(1-p_O = \frac{1}{n}(N_{12}+N_{21})\)</span>, the observed counts can be expressed as <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a> below</p></li>
@@ -353,14 +353,26 @@ Within this page, rater <span class="math notranslate nohighlight">\(j=2\)</span
 </table>
 <p>From <a class="reference internal" href="#table-kappa3-4"><span class="std std-numref">Table 17</span></a>, we can see that <span class="math notranslate nohighlight">\(p_E = \frac{1}{2}( 1 - \hat{BI}^2 + \hat{PI}^2)\)</span> and <a class="footnote-reference brackets" href="#id10" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <sup>(Equation 1 and Appendix A)</sup></p>
 <div class="math notranslate nohighlight" id="equation-eq-kappa3-2">
-<span class="eqno">(11)<a class="headerlink" href="#equation-eq-kappa3-2" title="Link to this equation"></a></span>\[\kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}.\]</div>
-<p>From <a class="reference internal" href="#equation-eq-kappa3-2">Eq. (11)</a>, we can observe change of <span class="math notranslate nohighlight">\(\kappa\)</span> related to <span class="math notranslate nohighlight">\(\kappa^{(BAPA)}\)</span>, <span class="math notranslate nohighlight">\(\hat{BI}\)</span>, and <span class="math notranslate nohighlight">\(\hat{PI}\)</span>.</p>
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-kappa3-2" title="Link to this equation"></a></span>\[\kappa = \frac{\kappa^{(BAPA)}  + \hat{BI}^2 - \hat{PI}^2}{1 + \hat{BI}^2 - \hat{PI}^2}.\]</div>
+<p>From <a class="reference internal" href="#equation-eq-kappa3-2">Eq. (13)</a>, we can observe change of <span class="math notranslate nohighlight">\(\kappa\)</span> related to <span class="math notranslate nohighlight">\(\kappa^{(BAPA)}\)</span>, <span class="math notranslate nohighlight">\(\hat{BI}\)</span>, and <span class="math notranslate nohighlight">\(\hat{PI}\)</span>.</p>
 </section>
 <section id="extend-pabak-to-more-than-2-categories">
 <h3>Extend PABAK to More Than 2 Categories<a class="headerlink" href="#extend-pabak-to-more-than-2-categories" title="Link to this heading"></a></h3>
 <p>Bryt et al. (1993) <a class="footnote-reference brackets" href="#id10" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> discuss <span class="math notranslate nohighlight">\(PABAK\)</span> in details for ratings in 2 categories,
 and mentioned the equivalence of <span class="math notranslate nohighlight">\(PABAK\)</span> to Bennett’s <span class="math notranslate nohighlight">\(S\)</span>,
 which can be calculated for more than 2 categories (<span class="math notranslate nohighlight">\(J \geq 2\)</span>) and that yields variance used by SAS <a class="footnote-reference brackets" href="#id11" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id12" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<p>For <span class="math notranslate nohighlight">\(J \gt 2\)</span>, <a class="reference internal" href="#equation-eq-kappa3-pe">Eq. (10)</a> and <a class="reference internal" href="#equation-eq-kappa3-po">Eq. (11)</a> become</p>
+<div class="math notranslate nohighlight" id="equation-eq-kappa3-pe2">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-kappa3-pe2" title="Link to this equation"></a></span>\[p_E^{(BAPA)} = \frac{1}{n^2} \left( \sum_{j=1}^J \frac{n}{J}\frac{n}{J} \right) = \frac{1}{J},\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-kappa3-po2">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-kappa3-po2" title="Link to this equation"></a></span>\[p_O^{(BAPA)} = \frac{1}{n} \left( \sum_{j=1}^J N_{jj}^{(PA)} \right) = \frac{1}{n} \left( \sum_{j=1}^J N_{jj} \right) = p_O.\]</div>
+<p>Combining <a class="reference internal" href="#equation-eq-kappa3-pe2">Eq. (14)</a> and <a class="reference internal" href="#equation-eq-kappa3-po2">Eq. (15)</a>, We can see that <a class="reference internal" href="#equation-eq-kappa3-1">Eq. (12)</a> becomes</p>
+<div class="math notranslate nohighlight" id="equation-eq-kappa3-3">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-kappa3-3" title="Link to this equation"></a></span>\[\kappa^{(BAPA)} = \frac{p_O - \frac{1}{J}}{1 - \frac{1}{J}},\]</div>
+<p>which is a linear function of <span class="math notranslate nohighlight">\(p_O\)</span> and a fixed value <span class="math notranslate nohighlight">\(J\)</span>. The variance of <span class="math notranslate nohighlight">\(\kappa^{(BAPA)\)</span> in <a class="reference internal" href="#equation-eq-kappa3-3">Eq. (16)</a> can be expressed as</p>
+<div class="math notranslate nohighlight" id="equation-eq-kappa3-3var">
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq-kappa3-3var" title="Link to this equation"></a></span>\[var\left(\kappa^{(BAPA)}\right) = \left(\frac{1}{1 - \frac{1}{J}}\right)^2\left(\frac{p_o(1-p_o)}{n}\right)\]</div>
 </section>
 <section id="discussion-from-the-original-paper">
 <h3>Discussion from the Original Paper<a class="headerlink" href="#discussion-from-the-original-paper" title="Link to this heading"></a></h3>
