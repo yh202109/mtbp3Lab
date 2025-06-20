@@ -290,7 +290,7 @@ Bryt et al. (1993) [1]_ discuss :math:`PABAK` in details for ratings in 2 catego
 and mentioned the equivalence of :math:`PABAK` to Bennett's :math:`S`, 
 which can be calculated for more than 2 categories (:math:`J \geq 2`) and that yields variance used by SAS [2]_ [3]_.
 
-For :math:`J \gt 2`, :eq:`eq_kappa3_pe` and :eq:`eq_kappa3_po` become
+For :math:`J \get 2`, :eq:`eq_kappa3_pe` and :eq:`eq_kappa3_po` become
 
 .. math::
   :label: eq_kappa3_pe2
@@ -320,7 +320,7 @@ which is a linear function of :math:`p_O` and a fixed value :math:`J`. The varia
   var\left(\kappa^{(BAPA)}\right) = \left(\frac{1}{1 - \frac{1}{J}}\right)^2\left(\frac{p_o(1-p_o)}{n}\right)
   = \left(\frac{J}{J - 1}\right)^2\left(\frac{p_o(1-p_o)}{n}\right)
 
-We can see the notation :math:`R = J = \frac{1}{p_E^{(BAPA)}}`.
+We can see from :eq:`eq_kappa3_3var` the notation :math:`R = J = \frac{1}{p_E^{(BAPA)}}`.
 
 Discussion from the Original Paper
 =============
