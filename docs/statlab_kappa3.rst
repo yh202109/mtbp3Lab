@@ -312,7 +312,7 @@ Combining :eq:`eq_kappa3_pe2` and :eq:`eq_kappa3_po2`, We can see that :eq:`eq_k
 
   \kappa^{(BAPA)} = \frac{p_O - \frac{1}{J}}{1 - \frac{1}{J}},
 
-which is a linear function of :math:`p_O` and a fixed value :math:`J`. The variance of :math:`\kappa^{(BAPA)` in :eq:`eq_kappa3_3` can be expressed as 
+which is a linear function of :math:`p_O` and a fixed value :math:`J`. The variance of :math:`\kappa^{(BAPA)}` in :eq:`eq_kappa3_3` can be expressed as 
 
 .. math::
   :label: eq_kappa3_3var
