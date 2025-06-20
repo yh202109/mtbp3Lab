@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mtbp3Lab.statlab.kappa &mdash; mtbp3Lab  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -94,18 +94,18 @@
 <span class="c1">#  You should have received a copy of the GNU General Public license</span>
 <span class="c1">#  along with this program. If not, see &lt;https://www.gnu.org/license/&gt;</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="kn">import</span> <span class="n">resample</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">resample</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 
 <div class="viewcode-block" id="KappaCalculator">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/statlab/kappa/index.html#mtbp3Lab.statlab.KappaCalculator">[docs]</a>
-<span class="k">class</span> <span class="nc">KappaCalculator</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">KappaCalculator</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for calculating Cohen&#39;s kappa and Fleiss&#39; kappa.</span>
 
@@ -119,7 +119,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">infmt</span><span class="o">=</span><span class="s1">&#39;sample_list&#39;</span><span class="p">,</span> <span class="n">stringna</span><span class="o">=</span><span class="s2">&quot;stringna&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">infmt</span><span class="o">=</span><span class="s1">&#39;sample_list&#39;</span><span class="p">,</span> <span class="n">stringna</span><span class="o">=</span><span class="s2">&quot;stringna&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes the KappaCalculator object.</span>
 
@@ -231,7 +231,7 @@
         <span class="k">return</span>
             
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">__convert_2dlist_to_string</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[],</span> <span class="n">stringna</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__convert_2dlist_to_string</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[],</span> <span class="n">stringna</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Converts a 2-dimensional list to a string representation.</span>
 
@@ -249,7 +249,7 @@
         <span class="k">return</span> <span class="n">y</span>
 
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">__calculate_cohen_kappa</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__calculate_cohen_kappa</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Calculates Cohen&#39;s kappa.</span>
 
@@ -268,7 +268,7 @@
         <span class="k">return</span> <span class="p">(</span><span class="n">observed_agreement</span> <span class="o">-</span> <span class="n">expected_agreement</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">expected_agreement</span><span class="p">)</span>
 
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">__calculate_fleiss_kappa</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__calculate_fleiss_kappa</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Calculates Fleiss&#39; kappa.</span>
 
@@ -289,7 +289,7 @@
 
 <div class="viewcode-block" id="KappaCalculator.bootstrap_cohen_ci">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/statlab/kappa/index.html#mtbp3Lab.statlab.KappaCalculator.bootstrap_cohen_ci">[docs]</a>
-    <span class="k">def</span> <span class="nf">bootstrap_cohen_ci</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">confidence_level</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">outfmt</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="n">out_digits</span><span class="o">=</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bootstrap_cohen_ci</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">confidence_level</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">outfmt</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="n">out_digits</span><span class="o">=</span><span class="mi">6</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Calculates the bootstrap confidence interval for Cohen&#39;s kappa.</span>
 
@@ -334,7 +334,7 @@
 
 <div class="viewcode-block" id="KappaCalculator.create_bubble_plot">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/statlab/kappa/index.html#mtbp3Lab.statlab.KappaCalculator.create_bubble_plot">[docs]</a>
-    <span class="k">def</span> <span class="nf">create_bubble_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">axis_label</span><span class="o">=</span><span class="p">[],</span> <span class="n">max_size_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">reverse_y</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_bubble_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">axis_label</span><span class="o">=</span><span class="p">[],</span> <span class="n">max_size_ratio</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">reverse_y</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates a bubble plot based on the y_count_sq matrix.</span>
 
@@ -427,7 +427,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Y. Hsu.</p>
+    <p>&#169; Copyright 2024-2025, Y. Hsu.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

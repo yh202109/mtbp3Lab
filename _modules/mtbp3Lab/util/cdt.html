@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mtbp3Lab.util.cdt &mdash; mtbp3Lab  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -95,12 +95,12 @@
 <span class="c1">#  You should have received a copy of the GNU General Public license</span>
 <span class="c1">#  along with this program. If not, see &lt;https://www.gnu.org/license/&gt;</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <div class="viewcode-block" id="diff_2cols_in_1df">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.diff_2cols_in_1df">[docs]</a>
-<span class="k">def</span> <span class="nf">diff_2cols_in_1df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col1</span><span class="o">=</span><span class="s1">&#39;ARM&#39;</span><span class="p">,</span> <span class="n">col2</span><span class="o">=</span><span class="s1">&#39;ACTARM&#39;</span><span class="p">,</span> <span class="n">keep_diff_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">diff_2cols_in_1df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col1</span><span class="o">=</span><span class="s1">&#39;ARM&#39;</span><span class="p">,</span> <span class="n">col2</span><span class="o">=</span><span class="s1">&#39;ACTARM&#39;</span><span class="p">,</span> <span class="n">keep_diff_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculate the difference between two columns in a DataFrame.</span>
 
@@ -144,7 +144,7 @@
         
 <div class="viewcode-block" id="diff_2cols_in_2df">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.diff_2cols_in_2df">[docs]</a>
-<span class="k">def</span> <span class="nf">diff_2cols_in_2df</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">gp</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">diff_2cols_in_2df</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">gp</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Check if a column exists in both dataframes.</span>
 
@@ -190,7 +190,7 @@
 
 <div class="viewcode-block" id="summarize_1nc_by_2group">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.summarize_1nc_by_2group">[docs]</a>
-<span class="k">def</span> <span class="nf">summarize_1nc_by_2group</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">group_col0</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">group_col1</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">to_cat</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">summarize_1nc_by_2group</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">group_col0</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">group_col1</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">to_cat</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a summary dataframe that shows the percentage of NaN values and values less than a cutoff point in a numerical column.</span>
 
@@ -258,8 +258,8 @@
 
 <div class="viewcode-block" id="ListTree">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.ListTree">[docs]</a>
-<span class="k">class</span> <span class="nc">ListTree</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lst</span><span class="o">=</span><span class="p">[],</span> <span class="n">label</span><span class="o">=</span><span class="p">[],</span> <span class="n">infmt</span><span class="o">=</span><span class="s1">&#39;path&#39;</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ListTree</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lst</span><span class="o">=</span><span class="p">[],</span> <span class="n">label</span><span class="o">=</span><span class="p">[],</span> <span class="n">infmt</span><span class="o">=</span><span class="s1">&#39;path&#39;</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="o">=</span> <span class="n">lst</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">infmt</span> <span class="o">=</span> <span class="n">infmt</span>
@@ -267,7 +267,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">prelst</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tree</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
     
-    <span class="k">def</span> <span class="nf">__list_tree_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__list_tree_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Input should be a list.&#39;</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -326,7 +326,7 @@
         
         <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df0</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">&#39;property&#39;</span><span class="p">,</span> <span class="s1">&#39;row_index&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;row_index&#39;</span><span class="p">:</span> <span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="s1">&#39;property&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;row_index&#39;</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">__list_tree_pre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">to_right</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__list_tree_pre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">to_right</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__list_tree_df</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">prelst</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span>
@@ -384,7 +384,7 @@
     
 <div class="viewcode-block" id="ListTree.list_tree">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.ListTree.list_tree">[docs]</a>
-    <span class="k">def</span> <span class="nf">list_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">to_right</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">to_right</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a DataFrame representing the tree structure of the object.</span>
 
@@ -412,7 +412,7 @@
 
 <div class="viewcode-block" id="ListTree.list_tree_with_keyword">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.ListTree.list_tree_with_keyword">[docs]</a>
-    <span class="k">def</span> <span class="nf">list_tree_with_keyword</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keywords</span><span class="p">,</span> <span class="n">neighbor</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">outfmt</span><span class="o">=</span><span class="s1">&#39;simple&#39;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_tree_with_keyword</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keywords</span><span class="p">,</span> <span class="n">neighbor</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">outfmt</span><span class="o">=</span><span class="s1">&#39;simple&#39;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Search for keywords in the list of items.</span>
 
@@ -452,7 +452,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Y. Hsu.</p>
+    <p>&#169; Copyright 2024-2025, Y. Hsu.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

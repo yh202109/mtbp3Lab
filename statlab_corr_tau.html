@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Correlation/NP/Kendall’s Tau &mdash; mtbp3Lab  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
@@ -224,7 +224,7 @@ The adjusted <span class="math notranslate nohighlight">\(\tau\)</span> (tau-b) 
 <section id="how-to">
 <h2>How-to<a class="headerlink" href="#how-to" title="Link to this heading"></a></h2>
 <p>To use <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code> <a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">kendalltau</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">kendalltau</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 
@@ -262,8 +262,8 @@ Both tau-a and tau-b can be calculated using the following steps:</p>
 <section id="id5">
 <h3>How-to<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <p>To use <code class="docutils literal notranslate"><span class="pre">mtbp3Lab</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">mtbp3Lab.statlab.corr</span> <span class="kn">import</span> <span class="n">CorrCalculator</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mtbp3Lab.statlab.corr</span><span class="w"> </span><span class="kn">import</span> <span class="n">CorrCalculator</span>
 
 <span class="n">size</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -308,7 +308,7 @@ Both tau-a and tau-b can be calculated using the following steps:</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Y. Hsu.</p>
+    <p>&#169; Copyright 2024-2025, Y. Hsu.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mtbp3Lab.statlab.corr &mdash; mtbp3Lab  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -94,13 +94,13 @@
 <span class="c1">#  You should have received a copy of the GNU General Public license</span>
 <span class="c1">#  along with this program. If not, see &lt;https://www.gnu.org/license/&gt;</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <div class="viewcode-block" id="CorrCalculator">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/statlab/index.html#mtbp3Lab.statlab.corr.CorrCalculator">[docs]</a>
-<span class="k">class</span> <span class="nc">CorrCalculator</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CorrCalculator</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for calculating correlation and plotting scatter plots.</span>
 
@@ -125,7 +125,7 @@
 <span class="sd">            - The labels for the x and y axes of the scatter plot.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">remove_na</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">remove_na</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="nb">list</span><span class="p">)),</span> <span class="s2">&quot;y must be either a pandas DataFrame or a list&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
@@ -151,13 +151,13 @@
         <span class="k">return</span>
             
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">__g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">sublist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">sublist</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">sublist</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">result</span>
 
 <div class="viewcode-block" id="CorrCalculator.calculate_kendall_tau">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/statlab/index.html#mtbp3Lab.statlab.corr.CorrCalculator.calculate_kendall_tau">[docs]</a>
-    <span class="k">def</span> <span class="nf">calculate_kendall_tau</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">calculate_kendall_tau</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Calculates the Kendall&#39;s tau correlation coefficient between the first two columns of the input data.</span>
 
@@ -174,7 +174,7 @@
 
 <div class="viewcode-block" id="CorrCalculator.plot_y_list">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/statlab/index.html#mtbp3Lab.statlab.corr.CorrCalculator.plot_y_list">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_y_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis_label</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">]):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_y_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis_label</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">]):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Plots a scatter plot of the input data.</span>
 
@@ -204,7 +204,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Y. Hsu.</p>
+    <p>&#169; Copyright 2024-2025, Y. Hsu.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mtbp3Lab.util.cdtg &mdash; mtbp3Lab  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -95,14 +95,14 @@
 <span class="c1">#  You should have received a copy of the GNU General Public license</span>
 <span class="c1">#  along with this program. If not, see &lt;https://www.gnu.org/license/&gt;</span>
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
 <div class="viewcode-block" id="catPlotter">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.catPlotter">[docs]</a>
-<span class="k">class</span> <span class="nc">catPlotter</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">catPlotter</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for creating categorical box plots and strip plots.</span>
 
@@ -130,7 +130,7 @@
 <span class="sd">    - ValueError: If an invalid parameter is provided or if group_col, x_col, or y_col is not found in DataFrame columns.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">y_col</span><span class="p">,</span> <span class="n">group_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid_wrap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pt_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y_scale_base</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_scale_base</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">fig_size_0</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">fig_size_1</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">point_position</span><span class="o">=</span><span class="s1">&#39;swarm&#39;</span><span class="p">,</span> <span class="n">x_label_rotate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid_kws</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">y_col</span><span class="p">,</span> <span class="n">group_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid_wrap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pt_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y_scale_base</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_scale_base</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">fig_size_0</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">fig_size_1</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">point_position</span><span class="o">=</span><span class="s1">&#39;swarm&#39;</span><span class="p">,</span> <span class="n">x_label_rotate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid_kws</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">df</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_example_dataset</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span>
@@ -167,7 +167,7 @@
     
 <div class="viewcode-block" id="catPlotter.update_parameters">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.catPlotter.update_parameters">[docs]</a>
-    <span class="k">def</span> <span class="nf">update_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Update the parameters.</span>
 
@@ -217,7 +217,7 @@
 
 <div class="viewcode-block" id="catPlotter.boxplot">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.catPlotter.boxplot">[docs]</a>
-    <span class="k">def</span> <span class="nf">boxplot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">boxplot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a categorical box plot and strip plot.</span>
 
@@ -296,7 +296,7 @@
 <div class="viewcode-block" id="catPlotter.generate_example_dataset">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.catPlotter.generate_example_dataset">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">generate_example_dataset</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_example_dataset</span><span class="p">():</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate an example dataset.</span>
 
@@ -320,7 +320,7 @@
 
 <div class="viewcode-block" id="catPlotter.lineplot">
 <a class="viewcode-back" href="../../../autoapi/mtbp3Lab/util/index.html#mtbp3Lab.catPlotter.lineplot">[docs]</a>
-    <span class="k">def</span> <span class="nf">lineplot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lineplot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a line plot by categorical group_col on the x-axis with grid option.</span>
 
@@ -441,7 +441,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Y. Hsu.</p>
+    <p>&#169; Copyright 2024-2025, Y. Hsu.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
