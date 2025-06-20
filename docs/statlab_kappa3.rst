@@ -318,7 +318,9 @@ which is a linear function of :math:`p_O` and a fixed value :math:`J`. The varia
   :label: eq_kappa3_3var
 
   var\left(\kappa^{(BAPA)}\right) = \left(\frac{1}{1 - \frac{1}{J}}\right)^2\left(\frac{p_o(1-p_o)}{n}\right)
+  = \left(\frac{J}{J - 1}\right)^2\left(\frac{p_o(1-p_o)}{n}\right)
 
+We can see the notation :math:`R = J = \frac{1}{p_E^{(BAPA)}}`.
 
 Discussion from the Original Paper
 =============
