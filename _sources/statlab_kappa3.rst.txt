@@ -290,7 +290,7 @@ Bryt et al. (1993) [1]_ discuss :math:`PABAK` in details for ratings in 2 catego
 and mentioned the equivalence of :math:`PABAK` to Bennett's :math:`S`, 
 which can be calculated for more than 2 categories (:math:`J \geq 2`) and that yields variance used by SAS [2]_ [3]_.
 
-For :math:`J \get 2`, :eq:`eq_kappa3_pe` and :eq:`eq_kappa3_po` become
+For :math:`J \geq 2`, :eq:`eq_kappa3_pe` and :eq:`eq_kappa3_po` become
 
 .. math::
   :label: eq_kappa3_pe2
